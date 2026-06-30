@@ -1,0 +1,1809 @@
+[ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Math,3,14,18]; ]
+import Toybox.Math;
+[ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [System,4,14,20]; ]
+import Toybox.System;
+[ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Time,5,14,18]; ]
+import Toybox.Time;
+[ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 6; @symbol_importdef<0> = [Toybox,6,7,13]; @symbol_importdef<1> = [Time,6,14,18]; @symbol_importdef<2> = [Gregorian,6,19,28]; ]
+import Toybox.Time.Gregorian;
+[ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 7; @symbol_importdef<0> = [Toybox,7,7,13]; @symbol_importdef<1> = [WatchUi,7,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 9; @symbol_classdef = [Lange970View,9,6,18]; @symbol_extends<0> = [WatchUi,9,27,34]; @symbol_extends<1> = [WatchFace,9,35,44]; ]
+class Lange970View extends WatchUi.WatchFace {
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 9; ]
+    <init> {
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 9; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 11; @position = 10; @symbol_constdef = [COLOR_BG,11,10,18]; ]
+    const COLOR_BG = 0x11100F;
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 12; @position = 10; @symbol_constdef = [COLOR_DIAL,12,10,20]; ]
+    const COLOR_DIAL = 0x1A1816;
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 13; @position = 10; @symbol_constdef = [COLOR_DIAL_2,13,10,22]; ]
+    const COLOR_DIAL_2 = 0x24211E;
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 14; @position = 10; @symbol_constdef = [COLOR_GOLD,14,10,20]; ]
+    const COLOR_GOLD = 0xC79A58;
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 15; @position = 10; @symbol_constdef = [COLOR_GOLD_2,15,10,22]; ]
+    const COLOR_GOLD_2 = 0xE0B56E;
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 16; @position = 10; @symbol_constdef = [COLOR_MUTED,16,10,21]; ]
+    const COLOR_MUTED = 0x756A5E;
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 17; @position = 10; @symbol_constdef = [COLOR_DARK,17,10,20]; ]
+    const COLOR_DARK = 0x080807;
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 18; @position = 10; @symbol_constdef = [COLOR_TEXT,18,10,20]; ]
+    const COLOR_TEXT = 0xE7D4B7;
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 20; @position = 8; @symbol_vardef = [_isAwake,20,8,16]; ]
+    var _isAwake = true;
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 22; @symbol_functiondef = [initialize,22,13,23]; ]
+    function initialize() as Void {
+C__Lange970_Lange970_source_Lange970View_mc_22_26_24_4_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 23 8 ]
+        symbol [ WatchFace %tmp.2 23 8 17 ];
+        %tmp.2 = getv ? :WatchFace;
+        symbol [ initialize %tmp.3 23 18 28 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C__Lange970_Lange970_source_Lange970View_mc_22_26_24_4_stop:
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 26; @symbol_functiondef = [onLayout,26,13,21]; @symbol_param<0> = [dc,26,22,24]; @symbol_param<0>_type<0> = [Dc,26,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 30; @symbol_functiondef = [onShow,30,13,19]; ]
+    function onShow() as Void {
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 33; @symbol_functiondef = [onUpdate,33,13,21]; @symbol_param<0> = [dc,33,22,24]; @symbol_param<0>_type<0> = [Dc,33,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+C__Lange970_Lange970_source_Lange970View_mc_33_40_46_4_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 34 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_33_40_46_4_start" "C__Lange970_Lange970_source_Lange970View_mc_33_40_46_4_stop" ]
+        %w.1 = local;
+        symbol [ w %w.1 34 12 13 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 34 16 18 ];
+        symbol [ getWidth %tmp.2 34 19 27 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %w.1 %tmp.3;
+        symbol [ w %w.1 34 12 13 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 35 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_33_40_46_4_start" "C__Lange970_Lange970_source_Lange970View_mc_33_40_46_4_stop" ]
+        %h.2 = local;
+        symbol [ h %h.2 35 12 13 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 35 16 18 ];
+        symbol [ getHeight %tmp.5 35 19 28 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %h.2 %tmp.6;
+        symbol [ h %h.2 35 12 13 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 36 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_33_40_46_4_start" "C__Lange970_Lange970_source_Lange970View_mc_33_40_46_4_stop" ]
+        %cx.3 = local;
+        symbol [ cx %cx.3 36 12 14 ];
+        %tmp.7 = lgetv %w.1;
+        symbol [ w %tmp.7 36 17 18 ];
+        %tmp.8 = 2;
+        %tmp.9 = div %tmp.7 %tmp.8;
+        lputv %cx.3 %tmp.9;
+        symbol [ cx %cx.3 36 12 14 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 37 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_33_40_46_4_start" "C__Lange970_Lange970_source_Lange970View_mc_33_40_46_4_stop" ]
+        %cy.4 = local;
+        symbol [ cy %cy.4 37 12 14 ];
+        %tmp.10 = lgetv %h.2;
+        symbol [ h %tmp.10 37 17 18 ];
+        %tmp.11 = 2;
+        %tmp.12 = div %tmp.10 %tmp.11;
+        lputv %cy.4 %tmp.12;
+        symbol [ cy %cy.4 37 12 14 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 38 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_33_40_46_4_start" "C__Lange970_Lange970_source_Lange970View_mc_33_40_46_4_stop" ]
+        %r.5 = local;
+        symbol [ r %r.5 38 12 13 ];
+C__Lange970_Lange970_source_Lange970View_mc_38_17_38_29_begin:
+        %tmp.13 = lgetv %w.1;
+        symbol [ w %tmp.13 38 17 18 ];
+        %tmp.14 = lgetv %h.2;
+        symbol [ h %tmp.14 38 21 22 ];
+        %tmp.15 = lt %tmp.13 %tmp.14;
+        bf %tmp.15 @C__Lange970_Lange970_source_Lange970View_mc_38_17_38_29_else_false;
+C__Lange970_Lange970_source_Lange970View_mc_38_17_38_29_true:
+        %tmp.16 = lgetv %w.1;
+        symbol [ w %tmp.16 38 25 26 ];
+        push %tmp.16;
+        goto @C__Lange970_Lange970_source_Lange970View_mc_38_17_38_29_end;
+C__Lange970_Lange970_source_Lange970View_mc_38_17_38_29_else_false:
+        %tmp.17 = lgetv %h.2;
+        symbol [ h %tmp.17 38 29 30 ];
+        push %tmp.17;
+C__Lange970_Lange970_source_Lange970View_mc_38_17_38_29_end:
+        %tmp.18 = phi [%tmp.15 @C__Lange970_Lange970_source_Lange970View_mc_38_17_38_29_begin] [%tmp.16 @C__Lange970_Lange970_source_Lange970View_mc_38_17_38_29_true] [%tmp.17 @C__Lange970_Lange970_source_Lange970View_mc_38_17_38_29_else_false] [%tmp.18 @C__Lange970_Lange970_source_Lange970View_mc_38_17_38_29_end];
+        %tmp.19 = 2;
+        %tmp.20 = div %tmp.18 %tmp.19;
+        %tmp.21 = 6;
+        %tmp.22 = sub %tmp.20 %tmp.21;
+        lputv %r.5 %tmp.22;
+        symbol [ r %r.5 38 12 13 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 40 8 ]
+        %tmp.23 = self;
+        symbol [ drawBackground %tmp.24 40 8 22 ];
+        %tmp.24 = getv function %tmp.23 :drawBackground;
+        %tmp.25 = lgetv %dc;
+        symbol [ dc %tmp.25 40 23 25 ];
+        %tmp.26 = lgetv %cx.3;
+        symbol [ cx %tmp.26 40 27 29 ];
+        %tmp.27 = lgetv %cy.4;
+        symbol [ cy %tmp.27 40 31 33 ];
+        %tmp.28 = lgetv %r.5;
+        symbol [ r %tmp.28 40 35 36 ];
+        invoke %tmp.23 %tmp.24(%tmp.25, %tmp.26, %tmp.27, %tmp.28);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 41 8 ]
+        %tmp.29 = self;
+        symbol [ drawMonthRing %tmp.30 41 8 21 ];
+        %tmp.30 = getv function %tmp.29 :drawMonthRing;
+        %tmp.31 = lgetv %dc;
+        symbol [ dc %tmp.31 41 22 24 ];
+        %tmp.32 = lgetv %cx.3;
+        symbol [ cx %tmp.32 41 26 28 ];
+        %tmp.33 = lgetv %cy.4;
+        symbol [ cy %tmp.33 41 30 32 ];
+        %tmp.34 = lgetv %r.5;
+        symbol [ r %tmp.34 41 34 35 ];
+        invoke %tmp.29 %tmp.30(%tmp.31, %tmp.32, %tmp.33, %tmp.34);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 42 8 ]
+        %tmp.35 = self;
+        symbol [ drawBatteryArc %tmp.36 42 8 22 ];
+        %tmp.36 = getv function %tmp.35 :drawBatteryArc;
+        %tmp.37 = lgetv %dc;
+        symbol [ dc %tmp.37 42 23 25 ];
+        %tmp.38 = lgetv %cx.3;
+        symbol [ cx %tmp.38 42 27 29 ];
+        %tmp.39 = lgetv %cy.4;
+        symbol [ cy %tmp.39 42 31 33 ];
+        %tmp.40 = lgetv %r.5;
+        symbol [ r %tmp.40 42 35 36 ];
+        %tmp.41 = 22;
+        %tmp.42 = sub %tmp.40 %tmp.41;
+        invoke %tmp.35 %tmp.36(%tmp.37, %tmp.38, %tmp.39, %tmp.42);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 43 8 ]
+        %tmp.43 = self;
+        symbol [ drawDateWindow %tmp.44 43 8 22 ];
+        %tmp.44 = getv function %tmp.43 :drawDateWindow;
+        %tmp.45 = lgetv %dc;
+        symbol [ dc %tmp.45 43 23 25 ];
+        %tmp.46 = lgetv %cx.3;
+        symbol [ cx %tmp.46 43 27 29 ];
+        %tmp.47 = lgetv %cy.4;
+        symbol [ cy %tmp.47 43 31 33 ];
+        invoke %tmp.43 %tmp.44(%tmp.45, %tmp.46, %tmp.47);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 44 8 ]
+        %tmp.48 = self;
+        symbol [ drawOffCenterDial %tmp.49 44 8 25 ];
+        %tmp.49 = getv function %tmp.48 :drawOffCenterDial;
+        %tmp.50 = lgetv %dc;
+        symbol [ dc %tmp.50 44 26 28 ];
+        %tmp.51 = lgetv %cx.3;
+        symbol [ cx %tmp.51 44 30 32 ];
+        %tmp.52 = 50;
+        %tmp.53 = add %tmp.51 %tmp.52;
+        %tmp.54 = lgetv %cy.4;
+        symbol [ cy %tmp.54 44 39 41 ];
+        %tmp.55 = 58;
+        %tmp.56 = sub %tmp.54 %tmp.55;
+        %tmp.57 = 86;
+        invoke %tmp.48 %tmp.49(%tmp.50, %tmp.53, %tmp.56, %tmp.57);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 45 8 ]
+        %tmp.58 = self;
+        symbol [ drawSignature %tmp.59 45 8 21 ];
+        %tmp.59 = getv function %tmp.58 :drawSignature;
+        %tmp.60 = lgetv %dc;
+        symbol [ dc %tmp.60 45 22 24 ];
+        %tmp.61 = lgetv %cx.3;
+        symbol [ cx %tmp.61 45 26 28 ];
+        %tmp.62 = lgetv %cy.4;
+        symbol [ cy %tmp.62 45 30 32 ];
+        invoke %tmp.58 %tmp.59(%tmp.60, %tmp.61, %tmp.62);
+C__Lange970_Lange970_source_Lange970View_mc_33_40_46_4_stop:
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 48; @symbol_functiondef = [drawBackground,48,13,27]; @symbol_param<0> = [dc,48,28,30]; @symbol_param<1> = [cx,48,32,34]; @symbol_param<2> = [cy,48,36,38]; @symbol_param<3> = [r,48,40,41]; ]
+    function drawBackground(dc, cx, cy, r) {
+C__Lange970_Lange970_source_Lange970View_mc_48_43_83_4_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 49 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 49 8 10 ];
+        symbol [ setColor %tmp.2 49 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ COLOR_BG %tmp.4 49 20 28 ];
+        %tmp.4 = getv ? :COLOR_BG;
+        symbol [ COLOR_BG %tmp.6 49 30 38 ];
+        %tmp.6 = getv ? :COLOR_BG;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 50 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 50 8 10 ];
+        symbol [ clear %tmp.8 50 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 52 8 ]
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 52 8 10 ];
+        symbol [ setColor %tmp.10 52 11 19 ];
+        %tmp.10 = getv function %tmp.9 :setColor;
+        symbol [ COLOR_DIAL %tmp.12 52 20 30 ];
+        %tmp.12 = getv ? :COLOR_DIAL;
+        symbol [ COLOR_DIAL %tmp.14 52 32 42 ];
+        %tmp.14 = getv ? :COLOR_DIAL;
+        invoke %tmp.9 %tmp.10(%tmp.12, %tmp.14);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 53 8 ]
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 53 8 10 ];
+        symbol [ fillCircle %tmp.16 53 11 21 ];
+        %tmp.16 = getv function %tmp.15 :fillCircle;
+        %tmp.17 = lgetv %cx;
+        symbol [ cx %tmp.17 53 22 24 ];
+        %tmp.18 = lgetv %cy;
+        symbol [ cy %tmp.18 53 26 28 ];
+        %tmp.19 = lgetv %r;
+        symbol [ r %tmp.19 53 30 31 ];
+        invoke %tmp.15 %tmp.16(%tmp.17, %tmp.18, %tmp.19);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 56 8 ]
+        %tmp.20 = lgetv %dc;
+        symbol [ dc %tmp.20 56 8 10 ];
+        symbol [ setPenWidth %tmp.21 56 11 22 ];
+        %tmp.21 = getv function %tmp.20 :setPenWidth;
+        %tmp.22 = 2;
+        invoke %tmp.20 %tmp.21(%tmp.22);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 57 8 ]
+        %tmp.23 = lgetv %dc;
+        symbol [ dc %tmp.23 57 8 10 ];
+        symbol [ setColor %tmp.24 57 11 19 ];
+        %tmp.24 = getv function %tmp.23 :setColor;
+        symbol [ COLOR_DIAL_2 %tmp.26 57 20 32 ];
+        %tmp.26 = getv ? :COLOR_DIAL_2;
+        symbol [ Graphics %tmp.27 57 34 42 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.28 57 43 60 ];
+        %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+        invoke %tmp.23 %tmp.24(%tmp.26, %tmp.28);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 58 8 ]
+        %tmp.29 = lgetv %dc;
+        symbol [ dc %tmp.29 58 8 10 ];
+        symbol [ drawCircle %tmp.30 58 11 21 ];
+        %tmp.30 = getv function %tmp.29 :drawCircle;
+        %tmp.31 = lgetv %cx;
+        symbol [ cx %tmp.31 58 22 24 ];
+        %tmp.32 = lgetv %cy;
+        symbol [ cy %tmp.32 58 26 28 ];
+        %tmp.33 = lgetv %r;
+        symbol [ r %tmp.33 58 30 31 ];
+        %tmp.34 = 10;
+        %tmp.35 = sub %tmp.33 %tmp.34;
+        invoke %tmp.29 %tmp.30(%tmp.31, %tmp.32, %tmp.35);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 59 8 ]
+        %tmp.36 = lgetv %dc;
+        symbol [ dc %tmp.36 59 8 10 ];
+        symbol [ setColor %tmp.37 59 11 19 ];
+        %tmp.37 = getv function %tmp.36 :setColor;
+        symbol [ COLOR_MUTED %tmp.39 59 20 31 ];
+        %tmp.39 = getv ? :COLOR_MUTED;
+        symbol [ Graphics %tmp.40 59 33 41 ];
+        %tmp.40 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.41 59 42 59 ];
+        %tmp.41 = getv %tmp.40 :COLOR_TRANSPARENT;
+        invoke %tmp.36 %tmp.37(%tmp.39, %tmp.41);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 60 8 ]
+        %tmp.42 = lgetv %dc;
+        symbol [ dc %tmp.42 60 8 10 ];
+        symbol [ drawCircle %tmp.43 60 11 21 ];
+        %tmp.43 = getv function %tmp.42 :drawCircle;
+        %tmp.44 = lgetv %cx;
+        symbol [ cx %tmp.44 60 22 24 ];
+        %tmp.45 = lgetv %cy;
+        symbol [ cy %tmp.45 60 26 28 ];
+        %tmp.46 = lgetv %r;
+        symbol [ r %tmp.46 60 30 31 ];
+        %tmp.47 = 23;
+        %tmp.48 = sub %tmp.46 %tmp.47;
+        invoke %tmp.42 %tmp.43(%tmp.44, %tmp.45, %tmp.48);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 63 8 ]
+        %tmp.49 = lgetv %dc;
+        symbol [ dc %tmp.49 63 8 10 ];
+        symbol [ setPenWidth %tmp.50 63 11 22 ];
+        %tmp.50 = getv function %tmp.49 :setPenWidth;
+        %tmp.51 = 3;
+        invoke %tmp.49 %tmp.50(%tmp.51);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 64 8 ]
+        %tmp.52 = lgetv %dc;
+        symbol [ dc %tmp.52 64 8 10 ];
+        symbol [ setColor %tmp.53 64 11 19 ];
+        %tmp.53 = getv function %tmp.52 :setColor;
+        symbol [ COLOR_GOLD %tmp.55 64 20 30 ];
+        %tmp.55 = getv ? :COLOR_GOLD;
+        symbol [ Graphics %tmp.56 64 32 40 ];
+        %tmp.56 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.57 64 41 58 ];
+        %tmp.57 = getv %tmp.56 :COLOR_TRANSPARENT;
+        invoke %tmp.52 %tmp.53(%tmp.55, %tmp.57);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 65 8 ]
+        %tmp.58 = lgetv %dc;
+        symbol [ dc %tmp.58 65 8 10 ];
+        symbol [ drawCircle %tmp.59 65 11 21 ];
+        %tmp.59 = getv function %tmp.58 :drawCircle;
+        %tmp.60 = lgetv %cx;
+        symbol [ cx %tmp.60 65 22 24 ];
+        %tmp.61 = lgetv %cy;
+        symbol [ cy %tmp.61 65 26 28 ];
+        %tmp.62 = lgetv %r;
+        symbol [ r %tmp.62 65 30 31 ];
+        %tmp.63 = 2;
+        %tmp.64 = sub %tmp.62 %tmp.63;
+        invoke %tmp.58 %tmp.59(%tmp.60, %tmp.61, %tmp.64);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 66 8 ]
+        %tmp.65 = lgetv %dc;
+        symbol [ dc %tmp.65 66 8 10 ];
+        symbol [ setPenWidth %tmp.66 66 11 22 ];
+        %tmp.66 = getv function %tmp.65 :setPenWidth;
+        %tmp.67 = 1;
+        invoke %tmp.65 %tmp.66(%tmp.67);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 67 8 ]
+        %tmp.68 = lgetv %dc;
+        symbol [ dc %tmp.68 67 8 10 ];
+        symbol [ setColor %tmp.69 67 11 19 ];
+        %tmp.69 = getv function %tmp.68 :setColor;
+        symbol [ COLOR_GOLD_2 %tmp.71 67 20 32 ];
+        %tmp.71 = getv ? :COLOR_GOLD_2;
+        symbol [ Graphics %tmp.72 67 34 42 ];
+        %tmp.72 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.73 67 43 60 ];
+        %tmp.73 = getv %tmp.72 :COLOR_TRANSPARENT;
+        invoke %tmp.68 %tmp.69(%tmp.71, %tmp.73);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 68 8 ]
+        %tmp.74 = lgetv %dc;
+        symbol [ dc %tmp.74 68 8 10 ];
+        symbol [ drawCircle %tmp.75 68 11 21 ];
+        %tmp.75 = getv function %tmp.74 :drawCircle;
+        %tmp.76 = lgetv %cx;
+        symbol [ cx %tmp.76 68 22 24 ];
+        %tmp.77 = lgetv %cy;
+        symbol [ cy %tmp.77 68 26 28 ];
+        %tmp.78 = lgetv %r;
+        symbol [ r %tmp.78 68 30 31 ];
+        %tmp.79 = 9;
+        %tmp.80 = sub %tmp.78 %tmp.79;
+        invoke %tmp.74 %tmp.75(%tmp.76, %tmp.77, %tmp.80);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 71 8 ]
+        for @C__Lange970_Lange970_source_Lange970View_mc_71_8_82_8_for_test @C__Lange970_Lange970_source_Lange970View_mc_71_8_82_8_for_incr @C__Lange970_Lange970_source_Lange970View_mc_71_8_82_8_for_end;
+C__Lange970_Lange970_source_Lange970View_mc_71_8_82_8_for_init:
+        [ "C__Lange970_Lange970_source_Lange970View_mc_71_8_82_8_for_begin" "C__Lange970_Lange970_source_Lange970View_mc_71_8_82_8_for_end" ]
+        %i.1 = local;
+        symbol [ i %i.1 71 17 18 ];
+        %tmp.81 = 0;
+        lputv %i.1 %tmp.81;
+        symbol [ i %i.1 71 17 18 ];
+C__Lange970_Lange970_source_Lange970View_mc_71_8_82_8_for_test:
+        %tmp.82 = lgetv %i.1;
+        symbol [ i %tmp.82 71 24 25 ];
+        %tmp.83 = 60;
+        %tmp.84 = lt %tmp.82 %tmp.83;
+        bf %tmp.84 @C__Lange970_Lange970_source_Lange970View_mc_71_8_82_8_for_end;
+C__Lange970_Lange970_source_Lange970View_mc_71_8_82_8_for_begin:
+C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 72 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_start" "C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_stop" ]
+        %a.2 = local;
+        symbol [ a %a.2 72 16 17 ];
+        %tmp.85 = self;
+        symbol [ degreesToRadians %tmp.86 72 20 36 ];
+        %tmp.86 = getv function %tmp.85 :degreesToRadians;
+        %tmp.87 = lgetv %i.1;
+        symbol [ i %tmp.87 72 37 38 ];
+        %tmp.88 = 6;
+        %tmp.89 = mul %tmp.87 %tmp.88;
+        %tmp.90 = 90;
+        %tmp.91 = sub %tmp.89 %tmp.90;
+        %tmp.92 = invoke %tmp.85 %tmp.86(%tmp.91);
+        lputv %a.2 %tmp.92;
+        symbol [ a %a.2 72 16 17 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 73 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_start" "C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_stop" ]
+        %outer.3 = local;
+        symbol [ outer %outer.3 73 16 21 ];
+        %tmp.93 = lgetv %r;
+        symbol [ r %tmp.93 73 24 25 ];
+        %tmp.94 = 17;
+        %tmp.95 = sub %tmp.93 %tmp.94;
+        lputv %outer.3 %tmp.95;
+        symbol [ outer %outer.3 73 16 21 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 74 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_start" "C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_stop" ]
+        %inner.4 = local;
+        symbol [ inner %inner.4 74 16 21 ];
+C__Lange970_Lange970_source_Lange970View_mc_74_24_74_52_begin:
+        %tmp.96 = lgetv %i.1;
+        symbol [ i %tmp.96 74 25 26 ];
+        %tmp.97 = 5;
+        %tmp.98 = mod %tmp.96 %tmp.97;
+        %tmp.99 = 0;
+        %tmp.100 = eq %tmp.98 %tmp.99;
+        bf %tmp.100 @C__Lange970_Lange970_source_Lange970View_mc_74_24_74_52_else_false;
+C__Lange970_Lange970_source_Lange970View_mc_74_24_74_52_true:
+        %tmp.101 = lgetv %r;
+        symbol [ r %tmp.101 74 39 40 ];
+        %tmp.102 = 34;
+        %tmp.103 = sub %tmp.101 %tmp.102;
+        push %tmp.103;
+        goto @C__Lange970_Lange970_source_Lange970View_mc_74_24_74_52_end;
+C__Lange970_Lange970_source_Lange970View_mc_74_24_74_52_else_false:
+        %tmp.104 = lgetv %r;
+        symbol [ r %tmp.104 74 48 49 ];
+        %tmp.105 = 25;
+        %tmp.106 = sub %tmp.104 %tmp.105;
+        push %tmp.106;
+C__Lange970_Lange970_source_Lange970View_mc_74_24_74_52_end:
+        %tmp.107 = phi [%tmp.100 @C__Lange970_Lange970_source_Lange970View_mc_74_24_74_52_begin] [%tmp.103 @C__Lange970_Lange970_source_Lange970View_mc_74_24_74_52_true] [%tmp.106 @C__Lange970_Lange970_source_Lange970View_mc_74_24_74_52_else_false] [%tmp.107 @C__Lange970_Lange970_source_Lange970View_mc_74_24_74_52_end];
+        lputv %inner.4 %tmp.107;
+        symbol [ inner %inner.4 74 16 21 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 75 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_start" "C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_stop" ]
+        %x1.5 = local;
+        symbol [ x1 %x1.5 75 16 18 ];
+        %tmp.108 = lgetv %cx;
+        symbol [ cx %tmp.108 75 21 23 ];
+        symbol [ Math %tmp.109 75 26 30 ];
+        %tmp.109 = getm $.Toybox.Math;
+        symbol [ cos %tmp.110 75 31 34 ];
+        %tmp.110 = getv function %tmp.109 :cos;
+        %tmp.111 = lgetv %a.2;
+        symbol [ a %tmp.111 75 35 36 ];
+        %tmp.112 = invoke %tmp.109 %tmp.110(%tmp.111);
+        %tmp.113 = lgetv %inner.4;
+        symbol [ inner %tmp.113 75 40 45 ];
+        %tmp.114 = mul %tmp.112 %tmp.113;
+        %tmp.115 = add %tmp.108 %tmp.114;
+        lputv %x1.5 %tmp.115;
+        symbol [ x1 %x1.5 75 16 18 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 76 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_start" "C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_stop" ]
+        %y1.6 = local;
+        symbol [ y1 %y1.6 76 16 18 ];
+        %tmp.116 = lgetv %cy;
+        symbol [ cy %tmp.116 76 21 23 ];
+        symbol [ Math %tmp.117 76 26 30 ];
+        %tmp.117 = getm $.Toybox.Math;
+        symbol [ sin %tmp.118 76 31 34 ];
+        %tmp.118 = getv function %tmp.117 :sin;
+        %tmp.119 = lgetv %a.2;
+        symbol [ a %tmp.119 76 35 36 ];
+        %tmp.120 = invoke %tmp.117 %tmp.118(%tmp.119);
+        %tmp.121 = lgetv %inner.4;
+        symbol [ inner %tmp.121 76 40 45 ];
+        %tmp.122 = mul %tmp.120 %tmp.121;
+        %tmp.123 = add %tmp.116 %tmp.122;
+        lputv %y1.6 %tmp.123;
+        symbol [ y1 %y1.6 76 16 18 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 77 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_start" "C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_stop" ]
+        %x2.7 = local;
+        symbol [ x2 %x2.7 77 16 18 ];
+        %tmp.124 = lgetv %cx;
+        symbol [ cx %tmp.124 77 21 23 ];
+        symbol [ Math %tmp.125 77 26 30 ];
+        %tmp.125 = getm $.Toybox.Math;
+        symbol [ cos %tmp.126 77 31 34 ];
+        %tmp.126 = getv function %tmp.125 :cos;
+        %tmp.127 = lgetv %a.2;
+        symbol [ a %tmp.127 77 35 36 ];
+        %tmp.128 = invoke %tmp.125 %tmp.126(%tmp.127);
+        %tmp.129 = lgetv %outer.3;
+        symbol [ outer %tmp.129 77 40 45 ];
+        %tmp.130 = mul %tmp.128 %tmp.129;
+        %tmp.131 = add %tmp.124 %tmp.130;
+        lputv %x2.7 %tmp.131;
+        symbol [ x2 %x2.7 77 16 18 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 78 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_start" "C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_stop" ]
+        %y2.8 = local;
+        symbol [ y2 %y2.8 78 16 18 ];
+        %tmp.132 = lgetv %cy;
+        symbol [ cy %tmp.132 78 21 23 ];
+        symbol [ Math %tmp.133 78 26 30 ];
+        %tmp.133 = getm $.Toybox.Math;
+        symbol [ sin %tmp.134 78 31 34 ];
+        %tmp.134 = getv function %tmp.133 :sin;
+        %tmp.135 = lgetv %a.2;
+        symbol [ a %tmp.135 78 35 36 ];
+        %tmp.136 = invoke %tmp.133 %tmp.134(%tmp.135);
+        %tmp.137 = lgetv %outer.3;
+        symbol [ outer %tmp.137 78 40 45 ];
+        %tmp.138 = mul %tmp.136 %tmp.137;
+        %tmp.139 = add %tmp.132 %tmp.138;
+        lputv %y2.8 %tmp.139;
+        symbol [ y2 %y2.8 78 16 18 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 79 12 ]
+        %tmp.140 = lgetv %dc;
+        symbol [ dc %tmp.140 79 12 14 ];
+        symbol [ setPenWidth %tmp.141 79 15 26 ];
+        %tmp.141 = getv function %tmp.140 :setPenWidth;
+C__Lange970_Lange970_source_Lange970View_mc_79_27_79_44_begin:
+        %tmp.142 = lgetv %i.1;
+        symbol [ i %tmp.142 79 27 28 ];
+        %tmp.143 = 5;
+        %tmp.144 = mod %tmp.142 %tmp.143;
+        %tmp.145 = 0;
+        %tmp.146 = eq %tmp.144 %tmp.145;
+        bf %tmp.146 @C__Lange970_Lange970_source_Lange970View_mc_79_27_79_44_else_false;
+C__Lange970_Lange970_source_Lange970View_mc_79_27_79_44_true:
+        %tmp.147 = 3;
+        push %tmp.147;
+        goto @C__Lange970_Lange970_source_Lange970View_mc_79_27_79_44_end;
+C__Lange970_Lange970_source_Lange970View_mc_79_27_79_44_else_false:
+        %tmp.148 = 1;
+        push %tmp.148;
+C__Lange970_Lange970_source_Lange970View_mc_79_27_79_44_end:
+        %tmp.149 = phi [%tmp.146 @C__Lange970_Lange970_source_Lange970View_mc_79_27_79_44_begin] [%tmp.147 @C__Lange970_Lange970_source_Lange970View_mc_79_27_79_44_true] [%tmp.148 @C__Lange970_Lange970_source_Lange970View_mc_79_27_79_44_else_false] [%tmp.149 @C__Lange970_Lange970_source_Lange970View_mc_79_27_79_44_end];
+        invoke %tmp.140 %tmp.141(%tmp.149);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 80 12 ]
+        %tmp.150 = lgetv %dc;
+        symbol [ dc %tmp.150 80 12 14 ];
+        symbol [ setColor %tmp.151 80 15 23 ];
+        %tmp.151 = getv function %tmp.150 :setColor;
+C__Lange970_Lange970_source_Lange970View_mc_80_24_80_52_begin:
+        %tmp.152 = lgetv %i.1;
+        symbol [ i %tmp.152 80 24 25 ];
+        %tmp.153 = 5;
+        %tmp.154 = mod %tmp.152 %tmp.153;
+        %tmp.155 = 0;
+        %tmp.156 = eq %tmp.154 %tmp.155;
+        bf %tmp.156 @C__Lange970_Lange970_source_Lange970View_mc_80_24_80_52_else_false;
+C__Lange970_Lange970_source_Lange970View_mc_80_24_80_52_true:
+        symbol [ COLOR_GOLD_2 %tmp.158 80 37 49 ];
+        %tmp.158 = getv ? :COLOR_GOLD_2;
+        push %tmp.158;
+        goto @C__Lange970_Lange970_source_Lange970View_mc_80_24_80_52_end;
+C__Lange970_Lange970_source_Lange970View_mc_80_24_80_52_else_false:
+        symbol [ COLOR_MUTED %tmp.160 80 52 63 ];
+        %tmp.160 = getv ? :COLOR_MUTED;
+        push %tmp.160;
+C__Lange970_Lange970_source_Lange970View_mc_80_24_80_52_end:
+        %tmp.161 = phi [%tmp.156 @C__Lange970_Lange970_source_Lange970View_mc_80_24_80_52_begin] [%tmp.158 @C__Lange970_Lange970_source_Lange970View_mc_80_24_80_52_true] [%tmp.160 @C__Lange970_Lange970_source_Lange970View_mc_80_24_80_52_else_false] [%tmp.161 @C__Lange970_Lange970_source_Lange970View_mc_80_24_80_52_end];
+        symbol [ Graphics %tmp.162 80 65 73 ];
+        %tmp.162 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.163 80 74 91 ];
+        %tmp.163 = getv %tmp.162 :COLOR_TRANSPARENT;
+        invoke %tmp.150 %tmp.151(%tmp.161, %tmp.163);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 81 12 ]
+        %tmp.164 = lgetv %dc;
+        symbol [ dc %tmp.164 81 12 14 ];
+        symbol [ drawLine %tmp.165 81 15 23 ];
+        %tmp.165 = getv function %tmp.164 :drawLine;
+        %tmp.166 = lgetv %x1.5;
+        symbol [ x1 %tmp.166 81 24 26 ];
+        %tmp.167 = lgetv %y1.6;
+        symbol [ y1 %tmp.167 81 28 30 ];
+        %tmp.168 = lgetv %x2.7;
+        symbol [ x2 %tmp.168 81 32 34 ];
+        %tmp.169 = lgetv %y2.8;
+        symbol [ y2 %tmp.169 81 36 38 ];
+        invoke %tmp.164 %tmp.165(%tmp.166, %tmp.167, %tmp.168, %tmp.169);
+C__Lange970_Lange970_source_Lange970View_mc_71_40_82_8_stop:
+C__Lange970_Lange970_source_Lange970View_mc_71_8_82_8_for_incr:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 71 ]
+        %tmp.170 = lgetv %i.1;
+        symbol [ i %tmp.170 71 32 33 ];
+        %tmp.171 = 1;
+        %tmp.172 = add %tmp.170 %tmp.171;
+        lputv %i.1 %tmp.172;
+        symbol [ i %i.1 71 32 33 ];
+        goto @C__Lange970_Lange970_source_Lange970View_mc_71_8_82_8_for_test;
+C__Lange970_Lange970_source_Lange970View_mc_71_8_82_8_for_end:
+C__Lange970_Lange970_source_Lange970View_mc_48_43_83_4_stop:
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 85; @symbol_functiondef = [drawMonthRing,85,13,26]; @symbol_param<0> = [dc,85,27,29]; @symbol_param<1> = [cx,85,31,33]; @symbol_param<2> = [cy,85,35,37]; @symbol_param<3> = [r,85,39,40]; ]
+    function drawMonthRing(dc, cx, cy, r) {
+C__Lange970_Lange970_source_Lange970View_mc_85_42_105_4_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 86 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_85_42_105_4_start" "C__Lange970_Lange970_source_Lange970View_mc_85_42_105_4_stop" ]
+        %months.1 = local;
+        symbol [ months %months.1 86 12 18 ];
+        %tmp.1 = newa 12;
+        %tmp.2 = "JAN";
+        %tmp.3 = dup %tmp.1;
+        %tmp.4 = aputv %tmp.3 0 %tmp.2;
+        %tmp.5 = "FEB";
+        %tmp.6 = dup %tmp.4;
+        %tmp.7 = aputv %tmp.6 1 %tmp.5;
+        %tmp.8 = "MAR";
+        %tmp.9 = dup %tmp.7;
+        %tmp.10 = aputv %tmp.9 2 %tmp.8;
+        %tmp.11 = "APR";
+        %tmp.12 = dup %tmp.10;
+        %tmp.13 = aputv %tmp.12 3 %tmp.11;
+        %tmp.14 = "MAY";
+        %tmp.15 = dup %tmp.13;
+        %tmp.16 = aputv %tmp.15 4 %tmp.14;
+        %tmp.17 = "JUN";
+        %tmp.18 = dup %tmp.16;
+        %tmp.19 = aputv %tmp.18 5 %tmp.17;
+        %tmp.20 = "JUL";
+        %tmp.21 = dup %tmp.19;
+        %tmp.22 = aputv %tmp.21 6 %tmp.20;
+        %tmp.23 = "AUG";
+        %tmp.24 = dup %tmp.22;
+        %tmp.25 = aputv %tmp.24 7 %tmp.23;
+        %tmp.26 = "SEP";
+        %tmp.27 = dup %tmp.25;
+        %tmp.28 = aputv %tmp.27 8 %tmp.26;
+        %tmp.29 = "OCT";
+        %tmp.30 = dup %tmp.28;
+        %tmp.31 = aputv %tmp.30 9 %tmp.29;
+        %tmp.32 = "NOV";
+        %tmp.33 = dup %tmp.31;
+        %tmp.34 = aputv %tmp.33 10 %tmp.32;
+        %tmp.35 = "DEC";
+        %tmp.36 = dup %tmp.34;
+        %tmp.37 = aputv %tmp.36 11 %tmp.35;
+        lputv %months.1 %tmp.37;
+        symbol [ months %months.1 86 12 18 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 87 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_85_42_105_4_start" "C__Lange970_Lange970_source_Lange970View_mc_85_42_105_4_stop" ]
+        %radius.2 = local;
+        symbol [ radius %radius.2 87 12 18 ];
+        %tmp.38 = lgetv %r;
+        symbol [ r %tmp.38 87 21 22 ];
+        %tmp.39 = 50;
+        %tmp.40 = sub %tmp.38 %tmp.39;
+        lputv %radius.2 %tmp.40;
+        symbol [ radius %radius.2 87 12 18 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 89 8 ]
+        %tmp.41 = lgetv %dc;
+        symbol [ dc %tmp.41 89 8 10 ];
+        symbol [ setColor %tmp.42 89 11 19 ];
+        %tmp.42 = getv function %tmp.41 :setColor;
+        symbol [ COLOR_MUTED %tmp.44 89 20 31 ];
+        %tmp.44 = getv ? :COLOR_MUTED;
+        symbol [ Graphics %tmp.45 89 33 41 ];
+        %tmp.45 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.46 89 42 59 ];
+        %tmp.46 = getv %tmp.45 :COLOR_TRANSPARENT;
+        invoke %tmp.41 %tmp.42(%tmp.44, %tmp.46);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 90 8 ]
+        for @C__Lange970_Lange970_source_Lange970View_mc_90_8_97_8_for_test @C__Lange970_Lange970_source_Lange970View_mc_90_8_97_8_for_incr @C__Lange970_Lange970_source_Lange970View_mc_90_8_97_8_for_end;
+C__Lange970_Lange970_source_Lange970View_mc_90_8_97_8_for_init:
+        [ "C__Lange970_Lange970_source_Lange970View_mc_90_8_97_8_for_begin" "C__Lange970_Lange970_source_Lange970View_mc_90_8_97_8_for_end" ]
+        %i.3 = local;
+        symbol [ i %i.3 90 17 18 ];
+        %tmp.47 = 0;
+        lputv %i.3 %tmp.47;
+        symbol [ i %i.3 90 17 18 ];
+C__Lange970_Lange970_source_Lange970View_mc_90_8_97_8_for_test:
+        %tmp.48 = lgetv %i.3;
+        symbol [ i %tmp.48 90 24 25 ];
+        %tmp.49 = 12;
+        %tmp.50 = lt %tmp.48 %tmp.49;
+        bf %tmp.50 @C__Lange970_Lange970_source_Lange970View_mc_90_8_97_8_for_end;
+C__Lange970_Lange970_source_Lange970View_mc_90_8_97_8_for_begin:
+C__Lange970_Lange970_source_Lange970View_mc_90_40_97_8_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 92 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_90_40_97_8_start" "C__Lange970_Lange970_source_Lange970View_mc_90_40_97_8_stop" ]
+        %deg.4 = local;
+        symbol [ deg %deg.4 92 16 19 ];
+        %tmp.51 = lgetv %i.3;
+        symbol [ i %tmp.51 92 23 24 ];
+        %tmp.52 = 30;
+        %tmp.53 = mul %tmp.51 %tmp.52;
+        %tmp.54 = 120;
+        %tmp.55 = add %tmp.53 %tmp.54;
+        lputv %deg.4 %tmp.55;
+        symbol [ deg %deg.4 92 16 19 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 93 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_90_40_97_8_start" "C__Lange970_Lange970_source_Lange970View_mc_90_40_97_8_stop" ]
+        %a.5 = local;
+        symbol [ a %a.5 93 16 17 ];
+        %tmp.56 = self;
+        symbol [ degreesToRadians %tmp.57 93 20 36 ];
+        %tmp.57 = getv function %tmp.56 :degreesToRadians;
+        %tmp.58 = lgetv %deg.4;
+        symbol [ deg %tmp.58 93 37 40 ];
+        %tmp.59 = invoke %tmp.56 %tmp.57(%tmp.58);
+        lputv %a.5 %tmp.59;
+        symbol [ a %a.5 93 16 17 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 94 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_90_40_97_8_start" "C__Lange970_Lange970_source_Lange970View_mc_90_40_97_8_stop" ]
+        %x.6 = local;
+        symbol [ x %x.6 94 16 17 ];
+        %tmp.60 = lgetv %cx;
+        symbol [ cx %tmp.60 94 20 22 ];
+        symbol [ Math %tmp.61 94 25 29 ];
+        %tmp.61 = getm $.Toybox.Math;
+        symbol [ cos %tmp.62 94 30 33 ];
+        %tmp.62 = getv function %tmp.61 :cos;
+        %tmp.63 = lgetv %a.5;
+        symbol [ a %tmp.63 94 34 35 ];
+        %tmp.64 = invoke %tmp.61 %tmp.62(%tmp.63);
+        %tmp.65 = lgetv %radius.2;
+        symbol [ radius %tmp.65 94 39 45 ];
+        %tmp.66 = mul %tmp.64 %tmp.65;
+        %tmp.67 = add %tmp.60 %tmp.66;
+        lputv %x.6 %tmp.67;
+        symbol [ x %x.6 94 16 17 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 95 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_90_40_97_8_start" "C__Lange970_Lange970_source_Lange970View_mc_90_40_97_8_stop" ]
+        %y.7 = local;
+        symbol [ y %y.7 95 16 17 ];
+        %tmp.68 = lgetv %cy;
+        symbol [ cy %tmp.68 95 20 22 ];
+        symbol [ Math %tmp.69 95 25 29 ];
+        %tmp.69 = getm $.Toybox.Math;
+        symbol [ sin %tmp.70 95 30 33 ];
+        %tmp.70 = getv function %tmp.69 :sin;
+        %tmp.71 = lgetv %a.5;
+        symbol [ a %tmp.71 95 34 35 ];
+        %tmp.72 = invoke %tmp.69 %tmp.70(%tmp.71);
+        %tmp.73 = lgetv %radius.2;
+        symbol [ radius %tmp.73 95 39 45 ];
+        %tmp.74 = mul %tmp.72 %tmp.73;
+        %tmp.75 = add %tmp.68 %tmp.74;
+        lputv %y.7 %tmp.75;
+        symbol [ y %y.7 95 16 17 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 96 12 ]
+        %tmp.76 = lgetv %dc;
+        symbol [ dc %tmp.76 96 12 14 ];
+        symbol [ drawText %tmp.77 96 15 23 ];
+        %tmp.77 = getv function %tmp.76 :drawText;
+        %tmp.78 = lgetv %x.6;
+        symbol [ x %tmp.78 96 24 25 ];
+        %tmp.79 = lgetv %y.7;
+        symbol [ y %tmp.79 96 27 28 ];
+        symbol [ Graphics %tmp.80 96 30 38 ];
+        %tmp.80 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.81 96 39 49 ];
+        %tmp.81 = getv %tmp.80 :FONT_XTINY;
+        %tmp.82 = lgetv %months.1;
+        symbol [ months %tmp.82 96 51 57 ];
+        %tmp.83 = lgetv %i.3;
+        symbol [ i %tmp.83 96 58 59 ];
+        %tmp.84 = agetv %tmp.82 %tmp.83;
+        symbol [ Graphics %tmp.85 96 62 70 ];
+        %tmp.85 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.86 96 71 90 ];
+        %tmp.86 = getv %tmp.85 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.87 96 93 101 ];
+        %tmp.87 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.88 96 102 122 ];
+        %tmp.88 = getv %tmp.87 :TEXT_JUSTIFY_VCENTER;
+        %tmp.89 = bitor %tmp.86 %tmp.88;
+        invoke %tmp.76 %tmp.77(%tmp.78, %tmp.79, %tmp.81, %tmp.84, %tmp.89);
+C__Lange970_Lange970_source_Lange970View_mc_90_40_97_8_stop:
+C__Lange970_Lange970_source_Lange970View_mc_90_8_97_8_for_incr:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 90 ]
+        %tmp.90 = lgetv %i.3;
+        symbol [ i %tmp.90 90 32 33 ];
+        %tmp.91 = 1;
+        %tmp.92 = add %tmp.90 %tmp.91;
+        lputv %i.3 %tmp.92;
+        symbol [ i %i.3 90 32 33 ];
+        goto @C__Lange970_Lange970_source_Lange970View_mc_90_8_97_8_for_test;
+C__Lange970_Lange970_source_Lange970View_mc_90_8_97_8_for_end:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 100 8 ]
+        %tmp.93 = lgetv %dc;
+        symbol [ dc %tmp.93 100 8 10 ];
+        symbol [ setPenWidth %tmp.94 100 11 22 ];
+        %tmp.94 = getv function %tmp.93 :setPenWidth;
+        %tmp.95 = 2;
+        invoke %tmp.93 %tmp.94(%tmp.95);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 101 8 ]
+        %tmp.96 = lgetv %dc;
+        symbol [ dc %tmp.96 101 8 10 ];
+        symbol [ setColor %tmp.97 101 11 19 ];
+        %tmp.97 = getv function %tmp.96 :setColor;
+        symbol [ COLOR_GOLD_2 %tmp.99 101 20 32 ];
+        %tmp.99 = getv ? :COLOR_GOLD_2;
+        symbol [ Graphics %tmp.100 101 34 42 ];
+        %tmp.100 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.101 101 43 60 ];
+        %tmp.101 = getv %tmp.100 :COLOR_TRANSPARENT;
+        invoke %tmp.96 %tmp.97(%tmp.99, %tmp.101);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 102 8 ]
+        %tmp.102 = lgetv %dc;
+        symbol [ dc %tmp.102 102 8 10 ];
+        symbol [ drawLine %tmp.103 102 11 19 ];
+        %tmp.103 = getv function %tmp.102 :drawLine;
+        %tmp.104 = lgetv %cx;
+        symbol [ cx %tmp.104 102 20 22 ];
+        %tmp.105 = lgetv %cy;
+        symbol [ cy %tmp.105 102 24 26 ];
+        %tmp.106 = lgetv %r;
+        symbol [ r %tmp.106 102 29 30 ];
+        %tmp.107 = add %tmp.105 %tmp.106;
+        %tmp.108 = 57;
+        %tmp.109 = sub %tmp.107 %tmp.108;
+        %tmp.110 = lgetv %cx;
+        symbol [ cx %tmp.110 102 37 39 ];
+        %tmp.111 = lgetv %cy;
+        symbol [ cy %tmp.111 102 41 43 ];
+        %tmp.112 = lgetv %r;
+        symbol [ r %tmp.112 102 46 47 ];
+        %tmp.113 = add %tmp.111 %tmp.112;
+        %tmp.114 = 38;
+        %tmp.115 = sub %tmp.113 %tmp.114;
+        invoke %tmp.102 %tmp.103(%tmp.104, %tmp.109, %tmp.110, %tmp.115);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 103 8 ]
+        %tmp.116 = lgetv %dc;
+        symbol [ dc %tmp.116 103 8 10 ];
+        symbol [ drawLine %tmp.117 103 11 19 ];
+        %tmp.117 = getv function %tmp.116 :drawLine;
+        %tmp.118 = lgetv %cx;
+        symbol [ cx %tmp.118 103 20 22 ];
+        %tmp.119 = 7;
+        %tmp.120 = sub %tmp.118 %tmp.119;
+        %tmp.121 = lgetv %cy;
+        symbol [ cy %tmp.121 103 28 30 ];
+        %tmp.122 = lgetv %r;
+        symbol [ r %tmp.122 103 33 34 ];
+        %tmp.123 = add %tmp.121 %tmp.122;
+        %tmp.124 = 45;
+        %tmp.125 = sub %tmp.123 %tmp.124;
+        %tmp.126 = lgetv %cx;
+        symbol [ cx %tmp.126 103 41 43 ];
+        %tmp.127 = lgetv %cy;
+        symbol [ cy %tmp.127 103 45 47 ];
+        %tmp.128 = lgetv %r;
+        symbol [ r %tmp.128 103 50 51 ];
+        %tmp.129 = add %tmp.127 %tmp.128;
+        %tmp.130 = 57;
+        %tmp.131 = sub %tmp.129 %tmp.130;
+        invoke %tmp.116 %tmp.117(%tmp.120, %tmp.125, %tmp.126, %tmp.131);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 104 8 ]
+        %tmp.132 = lgetv %dc;
+        symbol [ dc %tmp.132 104 8 10 ];
+        symbol [ drawLine %tmp.133 104 11 19 ];
+        %tmp.133 = getv function %tmp.132 :drawLine;
+        %tmp.134 = lgetv %cx;
+        symbol [ cx %tmp.134 104 20 22 ];
+        %tmp.135 = 7;
+        %tmp.136 = add %tmp.134 %tmp.135;
+        %tmp.137 = lgetv %cy;
+        symbol [ cy %tmp.137 104 28 30 ];
+        %tmp.138 = lgetv %r;
+        symbol [ r %tmp.138 104 33 34 ];
+        %tmp.139 = add %tmp.137 %tmp.138;
+        %tmp.140 = 45;
+        %tmp.141 = sub %tmp.139 %tmp.140;
+        %tmp.142 = lgetv %cx;
+        symbol [ cx %tmp.142 104 41 43 ];
+        %tmp.143 = lgetv %cy;
+        symbol [ cy %tmp.143 104 45 47 ];
+        %tmp.144 = lgetv %r;
+        symbol [ r %tmp.144 104 50 51 ];
+        %tmp.145 = add %tmp.143 %tmp.144;
+        %tmp.146 = 57;
+        %tmp.147 = sub %tmp.145 %tmp.146;
+        invoke %tmp.132 %tmp.133(%tmp.136, %tmp.141, %tmp.142, %tmp.147);
+C__Lange970_Lange970_source_Lange970View_mc_85_42_105_4_stop:
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 107; @symbol_functiondef = [drawBatteryArc,107,13,27]; @symbol_param<0> = [dc,107,28,30]; @symbol_param<1> = [cx,107,32,34]; @symbol_param<2> = [cy,107,36,38]; @symbol_param<3> = [r,107,40,41]; ]
+    function drawBatteryArc(dc, cx, cy, r) {
+C__Lange970_Lange970_source_Lange970View_mc_107_43_123_4_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 108 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_107_43_123_4_start" "C__Lange970_Lange970_source_Lange970View_mc_107_43_123_4_stop" ]
+        %stats.1 = local;
+        symbol [ stats %stats.1 108 12 17 ];
+        symbol [ System %tmp.1 108 20 26 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ getSystemStats %tmp.2 108 27 41 ];
+        %tmp.2 = getv function %tmp.1 :getSystemStats;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %stats.1 %tmp.3;
+        symbol [ stats %stats.1 108 12 17 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 109 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_107_43_123_4_start" "C__Lange970_Lange970_source_Lange970View_mc_107_43_123_4_stop" ]
+        %battery.2 = local;
+        symbol [ battery %battery.2 109 12 19 ];
+        %tmp.4 = lgetv %stats.1;
+        symbol [ stats %tmp.4 109 22 27 ];
+        symbol [ battery %tmp.5 109 28 35 ];
+        %tmp.5 = getv %tmp.4 :battery;
+        lputv %battery.2 %tmp.5;
+        symbol [ battery %battery.2 109 12 19 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 110 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_107_43_123_4_start" "C__Lange970_Lange970_source_Lange970View_mc_107_43_123_4_stop" ]
+        %startDeg.3 = local;
+        symbol [ startDeg %startDeg.3 110 12 20 ];
+        %tmp.6 = 232;
+        lputv %startDeg.3 %tmp.6;
+        symbol [ startDeg %startDeg.3 110 12 20 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 111 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_107_43_123_4_start" "C__Lange970_Lange970_source_Lange970View_mc_107_43_123_4_stop" ]
+        %endDeg.4 = local;
+        symbol [ endDeg %endDeg.4 111 12 18 ];
+        %tmp.7 = 30;
+        lputv %endDeg.4 %tmp.7;
+        symbol [ endDeg %endDeg.4 111 12 18 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 112 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_107_43_123_4_start" "C__Lange970_Lange970_source_Lange970View_mc_107_43_123_4_stop" ]
+        %span.5 = local;
+        symbol [ span %span.5 112 12 16 ];
+        %tmp.8 = 158;
+        lputv %span.5 %tmp.8;
+        symbol [ span %span.5 112 12 16 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 113 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_107_43_123_4_start" "C__Lange970_Lange970_source_Lange970View_mc_107_43_123_4_stop" ]
+        %fillEnd.6 = local;
+        symbol [ fillEnd %fillEnd.6 113 12 19 ];
+        %tmp.9 = lgetv %startDeg.3;
+        symbol [ startDeg %tmp.9 113 22 30 ];
+        %tmp.10 = lgetv %span.5;
+        symbol [ span %tmp.10 113 34 38 ];
+        %tmp.11 = lgetv %battery.2;
+        symbol [ battery %tmp.11 113 41 48 ];
+        %tmp.12 = mul %tmp.10 %tmp.11;
+        %tmp.13 = 100.0;
+        %tmp.14 = div %tmp.12 %tmp.13;
+        %tmp.15 = add %tmp.9 %tmp.14;
+        lputv %fillEnd.6 %tmp.15;
+        symbol [ fillEnd %fillEnd.6 113 12 19 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 114 8 ]
+C__Lange970_Lange970_source_Lange970View_mc_114_8_114_45_if_stmt:
+        %tmp.16 = lgetv %fillEnd.6;
+        symbol [ fillEnd %tmp.16 114 12 19 ];
+        %tmp.17 = 360;
+        %tmp.18 = gt %tmp.16 %tmp.17;
+        bf %tmp.18 @C__Lange970_Lange970_source_Lange970View_mc_114_8_114_45_if_end;
+C__Lange970_Lange970_source_Lange970View_mc_114_8_114_45_if_true:
+C__Lange970_Lange970_source_Lange970View_mc_114_27_114_45_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 114 29 ]
+        %tmp.19 = lgetv %fillEnd.6;
+        symbol [ fillEnd %tmp.19 114 29 36 ];
+        %tmp.20 = 360;
+        %tmp.21 = sub %tmp.19 %tmp.20;
+        lputv %fillEnd.6 %tmp.21;
+        symbol [ fillEnd %fillEnd.6 114 29 36 ];
+C__Lange970_Lange970_source_Lange970View_mc_114_27_114_45_stop:
+        goto @C__Lange970_Lange970_source_Lange970View_mc_114_8_114_45_if_end;
+C__Lange970_Lange970_source_Lange970View_mc_114_8_114_45_if_end:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 116 8 ]
+        %tmp.22 = lgetv %dc;
+        symbol [ dc %tmp.22 116 8 10 ];
+        symbol [ setPenWidth %tmp.23 116 11 22 ];
+        %tmp.23 = getv function %tmp.22 :setPenWidth;
+        %tmp.24 = 6;
+        invoke %tmp.22 %tmp.23(%tmp.24);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 117 8 ]
+        %tmp.25 = lgetv %dc;
+        symbol [ dc %tmp.25 117 8 10 ];
+        symbol [ setColor %tmp.26 117 11 19 ];
+        %tmp.26 = getv function %tmp.25 :setColor;
+        %tmp.27 = 0x2C2925;
+        symbol [ Graphics %tmp.28 117 30 38 ];
+        %tmp.28 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.29 117 39 56 ];
+        %tmp.29 = getv %tmp.28 :COLOR_TRANSPARENT;
+        invoke %tmp.25 %tmp.26(%tmp.27, %tmp.29);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 118 8 ]
+        %tmp.30 = lgetv %dc;
+        symbol [ dc %tmp.30 118 8 10 ];
+        symbol [ drawArc %tmp.31 118 11 18 ];
+        %tmp.31 = getv function %tmp.30 :drawArc;
+        %tmp.32 = lgetv %cx;
+        symbol [ cx %tmp.32 118 19 21 ];
+        %tmp.33 = lgetv %cy;
+        symbol [ cy %tmp.33 118 23 25 ];
+        %tmp.34 = lgetv %r;
+        symbol [ r %tmp.34 118 27 28 ];
+        symbol [ Graphics %tmp.35 118 30 38 ];
+        %tmp.35 = getm $.Toybox.Graphics;
+        symbol [ ARC_CLOCKWISE %tmp.36 118 39 52 ];
+        %tmp.36 = getv %tmp.35 :ARC_CLOCKWISE;
+        %tmp.37 = lgetv %startDeg.3;
+        symbol [ startDeg %tmp.37 118 54 62 ];
+        %tmp.38 = lgetv %endDeg.4;
+        symbol [ endDeg %tmp.38 118 64 70 ];
+        invoke %tmp.30 %tmp.31(%tmp.32, %tmp.33, %tmp.34, %tmp.36, %tmp.37, %tmp.38);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 120 8 ]
+        %tmp.39 = lgetv %dc;
+        symbol [ dc %tmp.39 120 8 10 ];
+        symbol [ setPenWidth %tmp.40 120 11 22 ];
+        %tmp.40 = getv function %tmp.39 :setPenWidth;
+        %tmp.41 = 5;
+        invoke %tmp.39 %tmp.40(%tmp.41);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 121 8 ]
+        %tmp.42 = lgetv %dc;
+        symbol [ dc %tmp.42 121 8 10 ];
+        symbol [ setColor %tmp.43 121 11 19 ];
+        %tmp.43 = getv function %tmp.42 :setColor;
+        symbol [ COLOR_GOLD %tmp.45 121 20 30 ];
+        %tmp.45 = getv ? :COLOR_GOLD;
+        symbol [ Graphics %tmp.46 121 32 40 ];
+        %tmp.46 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.47 121 41 58 ];
+        %tmp.47 = getv %tmp.46 :COLOR_TRANSPARENT;
+        invoke %tmp.42 %tmp.43(%tmp.45, %tmp.47);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 122 8 ]
+        %tmp.48 = lgetv %dc;
+        symbol [ dc %tmp.48 122 8 10 ];
+        symbol [ drawArc %tmp.49 122 11 18 ];
+        %tmp.49 = getv function %tmp.48 :drawArc;
+        %tmp.50 = lgetv %cx;
+        symbol [ cx %tmp.50 122 19 21 ];
+        %tmp.51 = lgetv %cy;
+        symbol [ cy %tmp.51 122 23 25 ];
+        %tmp.52 = lgetv %r;
+        symbol [ r %tmp.52 122 27 28 ];
+        symbol [ Graphics %tmp.53 122 30 38 ];
+        %tmp.53 = getm $.Toybox.Graphics;
+        symbol [ ARC_CLOCKWISE %tmp.54 122 39 52 ];
+        %tmp.54 = getv %tmp.53 :ARC_CLOCKWISE;
+        %tmp.55 = lgetv %startDeg.3;
+        symbol [ startDeg %tmp.55 122 54 62 ];
+        %tmp.56 = lgetv %fillEnd.6;
+        symbol [ fillEnd %tmp.56 122 64 71 ];
+        invoke %tmp.48 %tmp.49(%tmp.50, %tmp.51, %tmp.52, %tmp.54, %tmp.55, %tmp.56);
+C__Lange970_Lange970_source_Lange970View_mc_107_43_123_4_stop:
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 125; @symbol_functiondef = [drawDateWindow,125,13,27]; @symbol_param<0> = [dc,125,28,30]; @symbol_param<1> = [cx,125,32,34]; @symbol_param<2> = [cy,125,36,38]; ]
+    function drawDateWindow(dc, cx, cy) {
+C__Lange970_Lange970_source_Lange970View_mc_125_40_140_4_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 126 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_125_40_140_4_start" "C__Lange970_Lange970_source_Lange970View_mc_125_40_140_4_stop" ]
+        %info.1 = local;
+        symbol [ info %info.1 126 12 16 ];
+        symbol [ Gregorian %tmp.1 126 19 28 ];
+        %tmp.1 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.2 126 29 33 ];
+        %tmp.2 = getv function %tmp.1 :info;
+        symbol [ Time %tmp.3 126 34 38 ];
+        %tmp.3 = getm $.Toybox.Time;
+        symbol [ now %tmp.4 126 39 42 ];
+        %tmp.4 = getv function %tmp.3 :now;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        symbol [ Time %tmp.6 126 46 50 ];
+        %tmp.6 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.7 126 51 63 ];
+        %tmp.7 = getv %tmp.6 :FORMAT_SHORT;
+        %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.5, %tmp.7);
+        lputv %info.1 %tmp.8;
+        symbol [ info %info.1 126 12 16 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 127 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_125_40_140_4_start" "C__Lange970_Lange970_source_Lange970View_mc_125_40_140_4_stop" ]
+        %dayText.2 = local;
+        symbol [ dayText %dayText.2 127 12 19 ];
+        symbol [ now %tmp.10 127 22 25 ];
+        %tmp.10 = getv ? :now;
+        symbol [ day %tmp.11 127 26 29 ];
+        %tmp.11 = getv %tmp.10 :day;
+        symbol [ format %tmp.12 127 30 36 ];
+        %tmp.12 = getv function %tmp.11 :format;
+        %tmp.13 = "%02d";
+        %tmp.14 = invoke %tmp.11 %tmp.12(%tmp.13);
+        lputv %dayText.2 %tmp.14;
+        symbol [ dayText %dayText.2 127 12 19 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 128 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_125_40_140_4_start" "C__Lange970_Lange970_source_Lange970View_mc_125_40_140_4_stop" ]
+        %x.3 = local;
+        symbol [ x %x.3 128 12 13 ];
+        %tmp.15 = lgetv %cx;
+        symbol [ cx %tmp.15 128 16 18 ];
+        %tmp.16 = 108;
+        %tmp.17 = sub %tmp.15 %tmp.16;
+        lputv %x.3 %tmp.17;
+        symbol [ x %x.3 128 12 13 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 129 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_125_40_140_4_start" "C__Lange970_Lange970_source_Lange970View_mc_125_40_140_4_stop" ]
+        %y.4 = local;
+        symbol [ y %y.4 129 12 13 ];
+        %tmp.18 = lgetv %cy;
+        symbol [ cy %tmp.18 129 16 18 ];
+        %tmp.19 = 88;
+        %tmp.20 = sub %tmp.18 %tmp.19;
+        lputv %y.4 %tmp.20;
+        symbol [ y %y.4 129 12 13 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 130 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_125_40_140_4_start" "C__Lange970_Lange970_source_Lange970View_mc_125_40_140_4_stop" ]
+        %ww.5 = local;
+        symbol [ ww %ww.5 130 12 14 ];
+        %tmp.21 = 74;
+        lputv %ww.5 %tmp.21;
+        symbol [ ww %ww.5 130 12 14 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 131 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_125_40_140_4_start" "C__Lange970_Lange970_source_Lange970View_mc_125_40_140_4_stop" ]
+        %hh.6 = local;
+        symbol [ hh %hh.6 131 12 14 ];
+        %tmp.22 = 48;
+        lputv %hh.6 %tmp.22;
+        symbol [ hh %hh.6 131 12 14 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 133 8 ]
+        %tmp.23 = lgetv %dc;
+        symbol [ dc %tmp.23 133 8 10 ];
+        symbol [ setColor %tmp.24 133 11 19 ];
+        %tmp.24 = getv function %tmp.23 :setColor;
+        symbol [ COLOR_DARK %tmp.26 133 20 30 ];
+        %tmp.26 = getv ? :COLOR_DARK;
+        symbol [ COLOR_DARK %tmp.28 133 32 42 ];
+        %tmp.28 = getv ? :COLOR_DARK;
+        invoke %tmp.23 %tmp.24(%tmp.26, %tmp.28);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 134 8 ]
+        %tmp.29 = lgetv %dc;
+        symbol [ dc %tmp.29 134 8 10 ];
+        symbol [ fillRoundedRectangle %tmp.30 134 11 31 ];
+        %tmp.30 = getv function %tmp.29 :fillRoundedRectangle;
+        %tmp.31 = lgetv %x.3;
+        symbol [ x %tmp.31 134 32 33 ];
+        %tmp.32 = lgetv %y.4;
+        symbol [ y %tmp.32 134 35 36 ];
+        %tmp.33 = lgetv %ww.5;
+        symbol [ ww %tmp.33 134 38 40 ];
+        %tmp.34 = lgetv %hh.6;
+        symbol [ hh %tmp.34 134 42 44 ];
+        %tmp.35 = 8;
+        invoke %tmp.29 %tmp.30(%tmp.31, %tmp.32, %tmp.33, %tmp.34, %tmp.35);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 135 8 ]
+        %tmp.36 = lgetv %dc;
+        symbol [ dc %tmp.36 135 8 10 ];
+        symbol [ setPenWidth %tmp.37 135 11 22 ];
+        %tmp.37 = getv function %tmp.36 :setPenWidth;
+        %tmp.38 = 2;
+        invoke %tmp.36 %tmp.37(%tmp.38);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 136 8 ]
+        %tmp.39 = lgetv %dc;
+        symbol [ dc %tmp.39 136 8 10 ];
+        symbol [ setColor %tmp.40 136 11 19 ];
+        %tmp.40 = getv function %tmp.39 :setColor;
+        symbol [ COLOR_GOLD %tmp.42 136 20 30 ];
+        %tmp.42 = getv ? :COLOR_GOLD;
+        symbol [ Graphics %tmp.43 136 32 40 ];
+        %tmp.43 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.44 136 41 58 ];
+        %tmp.44 = getv %tmp.43 :COLOR_TRANSPARENT;
+        invoke %tmp.39 %tmp.40(%tmp.42, %tmp.44);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 137 8 ]
+        %tmp.45 = lgetv %dc;
+        symbol [ dc %tmp.45 137 8 10 ];
+        symbol [ drawRoundedRectangle %tmp.46 137 11 31 ];
+        %tmp.46 = getv function %tmp.45 :drawRoundedRectangle;
+        %tmp.47 = lgetv %x.3;
+        symbol [ x %tmp.47 137 32 33 ];
+        %tmp.48 = lgetv %y.4;
+        symbol [ y %tmp.48 137 35 36 ];
+        %tmp.49 = lgetv %ww.5;
+        symbol [ ww %tmp.49 137 38 40 ];
+        %tmp.50 = lgetv %hh.6;
+        symbol [ hh %tmp.50 137 42 44 ];
+        %tmp.51 = 8;
+        invoke %tmp.45 %tmp.46(%tmp.47, %tmp.48, %tmp.49, %tmp.50, %tmp.51);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 138 8 ]
+        %tmp.52 = lgetv %dc;
+        symbol [ dc %tmp.52 138 8 10 ];
+        symbol [ setColor %tmp.53 138 11 19 ];
+        %tmp.53 = getv function %tmp.52 :setColor;
+        symbol [ COLOR_TEXT %tmp.55 138 20 30 ];
+        %tmp.55 = getv ? :COLOR_TEXT;
+        symbol [ Graphics %tmp.56 138 32 40 ];
+        %tmp.56 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.57 138 41 58 ];
+        %tmp.57 = getv %tmp.56 :COLOR_TRANSPARENT;
+        invoke %tmp.52 %tmp.53(%tmp.55, %tmp.57);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 139 8 ]
+        %tmp.58 = lgetv %dc;
+        symbol [ dc %tmp.58 139 8 10 ];
+        symbol [ drawText %tmp.59 139 11 19 ];
+        %tmp.59 = getv function %tmp.58 :drawText;
+        %tmp.60 = lgetv %x.3;
+        symbol [ x %tmp.60 139 20 21 ];
+        %tmp.61 = lgetv %ww.5;
+        symbol [ ww %tmp.61 139 24 26 ];
+        %tmp.62 = 2;
+        %tmp.63 = div %tmp.61 %tmp.62;
+        %tmp.64 = add %tmp.60 %tmp.63;
+        %tmp.65 = lgetv %y.4;
+        symbol [ y %tmp.65 139 32 33 ];
+        %tmp.66 = lgetv %hh.6;
+        symbol [ hh %tmp.66 139 36 38 ];
+        %tmp.67 = 2;
+        %tmp.68 = div %tmp.66 %tmp.67;
+        %tmp.69 = add %tmp.65 %tmp.68;
+        symbol [ Graphics %tmp.70 139 44 52 ];
+        %tmp.70 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_MEDIUM %tmp.71 139 53 71 ];
+        %tmp.71 = getv %tmp.70 :FONT_NUMBER_MEDIUM;
+        %tmp.72 = lgetv %dayText.2;
+        symbol [ dayText %tmp.72 139 73 80 ];
+        symbol [ Graphics %tmp.73 139 82 90 ];
+        %tmp.73 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.74 139 91 110 ];
+        %tmp.74 = getv %tmp.73 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.75 139 113 121 ];
+        %tmp.75 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.76 139 122 142 ];
+        %tmp.76 = getv %tmp.75 :TEXT_JUSTIFY_VCENTER;
+        %tmp.77 = bitor %tmp.74 %tmp.76;
+        invoke %tmp.58 %tmp.59(%tmp.64, %tmp.69, %tmp.71, %tmp.72, %tmp.77);
+C__Lange970_Lange970_source_Lange970View_mc_125_40_140_4_stop:
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 142; @symbol_functiondef = [drawOffCenterDial,142,13,30]; @symbol_param<0> = [dc,142,31,33]; @symbol_param<1> = [cx,142,35,37]; @symbol_param<2> = [cy,142,39,41]; @symbol_param<3> = [r,142,43,44]; ]
+    function drawOffCenterDial(dc, cx, cy, r) {
+C__Lange970_Lange970_source_Lange970View_mc_142_46_177_4_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 143 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 143 8 10 ];
+        symbol [ setColor %tmp.2 143 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ COLOR_DARK %tmp.4 143 20 30 ];
+        %tmp.4 = getv ? :COLOR_DARK;
+        symbol [ COLOR_DARK %tmp.6 143 32 42 ];
+        %tmp.6 = getv ? :COLOR_DARK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 144 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 144 8 10 ];
+        symbol [ fillCircle %tmp.8 144 11 21 ];
+        %tmp.8 = getv function %tmp.7 :fillCircle;
+        %tmp.9 = lgetv %cx;
+        symbol [ cx %tmp.9 144 22 24 ];
+        %tmp.10 = lgetv %cy;
+        symbol [ cy %tmp.10 144 26 28 ];
+        %tmp.11 = lgetv %r;
+        symbol [ r %tmp.11 144 30 31 ];
+        invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.11);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 145 8 ]
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 145 8 10 ];
+        symbol [ setPenWidth %tmp.13 145 11 22 ];
+        %tmp.13 = getv function %tmp.12 :setPenWidth;
+        %tmp.14 = 3;
+        invoke %tmp.12 %tmp.13(%tmp.14);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 146 8 ]
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 146 8 10 ];
+        symbol [ setColor %tmp.16 146 11 19 ];
+        %tmp.16 = getv function %tmp.15 :setColor;
+        symbol [ COLOR_GOLD %tmp.18 146 20 30 ];
+        %tmp.18 = getv ? :COLOR_GOLD;
+        symbol [ Graphics %tmp.19 146 32 40 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.20 146 41 58 ];
+        %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 147 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 147 8 10 ];
+        symbol [ drawCircle %tmp.22 147 11 21 ];
+        %tmp.22 = getv function %tmp.21 :drawCircle;
+        %tmp.23 = lgetv %cx;
+        symbol [ cx %tmp.23 147 22 24 ];
+        %tmp.24 = lgetv %cy;
+        symbol [ cy %tmp.24 147 26 28 ];
+        %tmp.25 = lgetv %r;
+        symbol [ r %tmp.25 147 30 31 ];
+        invoke %tmp.21 %tmp.22(%tmp.23, %tmp.24, %tmp.25);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 148 8 ]
+        %tmp.26 = lgetv %dc;
+        symbol [ dc %tmp.26 148 8 10 ];
+        symbol [ setPenWidth %tmp.27 148 11 22 ];
+        %tmp.27 = getv function %tmp.26 :setPenWidth;
+        %tmp.28 = 1;
+        invoke %tmp.26 %tmp.27(%tmp.28);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 149 8 ]
+        %tmp.29 = lgetv %dc;
+        symbol [ dc %tmp.29 149 8 10 ];
+        symbol [ setColor %tmp.30 149 11 19 ];
+        %tmp.30 = getv function %tmp.29 :setColor;
+        symbol [ COLOR_MUTED %tmp.32 149 20 31 ];
+        %tmp.32 = getv ? :COLOR_MUTED;
+        symbol [ Graphics %tmp.33 149 33 41 ];
+        %tmp.33 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.34 149 42 59 ];
+        %tmp.34 = getv %tmp.33 :COLOR_TRANSPARENT;
+        invoke %tmp.29 %tmp.30(%tmp.32, %tmp.34);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 150 8 ]
+        %tmp.35 = lgetv %dc;
+        symbol [ dc %tmp.35 150 8 10 ];
+        symbol [ drawCircle %tmp.36 150 11 21 ];
+        %tmp.36 = getv function %tmp.35 :drawCircle;
+        %tmp.37 = lgetv %cx;
+        symbol [ cx %tmp.37 150 22 24 ];
+        %tmp.38 = lgetv %cy;
+        symbol [ cy %tmp.38 150 26 28 ];
+        %tmp.39 = lgetv %r;
+        symbol [ r %tmp.39 150 30 31 ];
+        %tmp.40 = 12;
+        %tmp.41 = sub %tmp.39 %tmp.40;
+        invoke %tmp.35 %tmp.36(%tmp.37, %tmp.38, %tmp.41);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 152 8 ]
+        for @C__Lange970_Lange970_source_Lange970View_mc_152_8_161_8_for_test @C__Lange970_Lange970_source_Lange970View_mc_152_8_161_8_for_incr @C__Lange970_Lange970_source_Lange970View_mc_152_8_161_8_for_end;
+C__Lange970_Lange970_source_Lange970View_mc_152_8_161_8_for_init:
+        [ "C__Lange970_Lange970_source_Lange970View_mc_152_8_161_8_for_begin" "C__Lange970_Lange970_source_Lange970View_mc_152_8_161_8_for_end" ]
+        %i.1 = local;
+        symbol [ i %i.1 152 17 18 ];
+        %tmp.42 = 0;
+        lputv %i.1 %tmp.42;
+        symbol [ i %i.1 152 17 18 ];
+C__Lange970_Lange970_source_Lange970View_mc_152_8_161_8_for_test:
+        %tmp.43 = lgetv %i.1;
+        symbol [ i %tmp.43 152 24 25 ];
+        %tmp.44 = 12;
+        %tmp.45 = lt %tmp.43 %tmp.44;
+        bf %tmp.45 @C__Lange970_Lange970_source_Lange970View_mc_152_8_161_8_for_end;
+C__Lange970_Lange970_source_Lange970View_mc_152_8_161_8_for_begin:
+C__Lange970_Lange970_source_Lange970View_mc_152_40_161_8_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 153 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_152_40_161_8_start" "C__Lange970_Lange970_source_Lange970View_mc_152_40_161_8_stop" ]
+        %a.2 = local;
+        symbol [ a %a.2 153 16 17 ];
+        %tmp.46 = self;
+        symbol [ degreesToRadians %tmp.47 153 20 36 ];
+        %tmp.47 = getv function %tmp.46 :degreesToRadians;
+        %tmp.48 = lgetv %i.1;
+        symbol [ i %tmp.48 153 37 38 ];
+        %tmp.49 = 30;
+        %tmp.50 = mul %tmp.48 %tmp.49;
+        %tmp.51 = 90;
+        %tmp.52 = sub %tmp.50 %tmp.51;
+        %tmp.53 = invoke %tmp.46 %tmp.47(%tmp.52);
+        lputv %a.2 %tmp.53;
+        symbol [ a %a.2 153 16 17 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 154 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_152_40_161_8_start" "C__Lange970_Lange970_source_Lange970View_mc_152_40_161_8_stop" ]
+        %x1.3 = local;
+        symbol [ x1 %x1.3 154 16 18 ];
+        %tmp.54 = lgetv %cx;
+        symbol [ cx %tmp.54 154 21 23 ];
+        symbol [ Math %tmp.55 154 26 30 ];
+        %tmp.55 = getm $.Toybox.Math;
+        symbol [ cos %tmp.56 154 31 34 ];
+        %tmp.56 = getv function %tmp.55 :cos;
+        %tmp.57 = lgetv %a.2;
+        symbol [ a %tmp.57 154 35 36 ];
+        %tmp.58 = invoke %tmp.55 %tmp.56(%tmp.57);
+        %tmp.59 = lgetv %r;
+        symbol [ r %tmp.59 154 41 42 ];
+        %tmp.60 = 23;
+        %tmp.61 = sub %tmp.59 %tmp.60;
+        %tmp.62 = mul %tmp.58 %tmp.61;
+        %tmp.63 = add %tmp.54 %tmp.62;
+        lputv %x1.3 %tmp.63;
+        symbol [ x1 %x1.3 154 16 18 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 155 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_152_40_161_8_start" "C__Lange970_Lange970_source_Lange970View_mc_152_40_161_8_stop" ]
+        %y1.4 = local;
+        symbol [ y1 %y1.4 155 16 18 ];
+        %tmp.64 = lgetv %cy;
+        symbol [ cy %tmp.64 155 21 23 ];
+        symbol [ Math %tmp.65 155 26 30 ];
+        %tmp.65 = getm $.Toybox.Math;
+        symbol [ sin %tmp.66 155 31 34 ];
+        %tmp.66 = getv function %tmp.65 :sin;
+        %tmp.67 = lgetv %a.2;
+        symbol [ a %tmp.67 155 35 36 ];
+        %tmp.68 = invoke %tmp.65 %tmp.66(%tmp.67);
+        %tmp.69 = lgetv %r;
+        symbol [ r %tmp.69 155 41 42 ];
+        %tmp.70 = 23;
+        %tmp.71 = sub %tmp.69 %tmp.70;
+        %tmp.72 = mul %tmp.68 %tmp.71;
+        %tmp.73 = add %tmp.64 %tmp.72;
+        lputv %y1.4 %tmp.73;
+        symbol [ y1 %y1.4 155 16 18 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 156 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_152_40_161_8_start" "C__Lange970_Lange970_source_Lange970View_mc_152_40_161_8_stop" ]
+        %x2.5 = local;
+        symbol [ x2 %x2.5 156 16 18 ];
+        %tmp.74 = lgetv %cx;
+        symbol [ cx %tmp.74 156 21 23 ];
+        symbol [ Math %tmp.75 156 26 30 ];
+        %tmp.75 = getm $.Toybox.Math;
+        symbol [ cos %tmp.76 156 31 34 ];
+        %tmp.76 = getv function %tmp.75 :cos;
+        %tmp.77 = lgetv %a.2;
+        symbol [ a %tmp.77 156 35 36 ];
+        %tmp.78 = invoke %tmp.75 %tmp.76(%tmp.77);
+        %tmp.79 = lgetv %r;
+        symbol [ r %tmp.79 156 41 42 ];
+        %tmp.80 = 10;
+        %tmp.81 = sub %tmp.79 %tmp.80;
+        %tmp.82 = mul %tmp.78 %tmp.81;
+        %tmp.83 = add %tmp.74 %tmp.82;
+        lputv %x2.5 %tmp.83;
+        symbol [ x2 %x2.5 156 16 18 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 157 12 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_152_40_161_8_start" "C__Lange970_Lange970_source_Lange970View_mc_152_40_161_8_stop" ]
+        %y2.6 = local;
+        symbol [ y2 %y2.6 157 16 18 ];
+        %tmp.84 = lgetv %cy;
+        symbol [ cy %tmp.84 157 21 23 ];
+        symbol [ Math %tmp.85 157 26 30 ];
+        %tmp.85 = getm $.Toybox.Math;
+        symbol [ sin %tmp.86 157 31 34 ];
+        %tmp.86 = getv function %tmp.85 :sin;
+        %tmp.87 = lgetv %a.2;
+        symbol [ a %tmp.87 157 35 36 ];
+        %tmp.88 = invoke %tmp.85 %tmp.86(%tmp.87);
+        %tmp.89 = lgetv %r;
+        symbol [ r %tmp.89 157 41 42 ];
+        %tmp.90 = 10;
+        %tmp.91 = sub %tmp.89 %tmp.90;
+        %tmp.92 = mul %tmp.88 %tmp.91;
+        %tmp.93 = add %tmp.84 %tmp.92;
+        lputv %y2.6 %tmp.93;
+        symbol [ y2 %y2.6 157 16 18 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 158 12 ]
+        %tmp.94 = lgetv %dc;
+        symbol [ dc %tmp.94 158 12 14 ];
+        symbol [ setPenWidth %tmp.95 158 15 26 ];
+        %tmp.95 = getv function %tmp.94 :setPenWidth;
+        %tmp.96 = 2;
+        invoke %tmp.94 %tmp.95(%tmp.96);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 159 12 ]
+        %tmp.97 = lgetv %dc;
+        symbol [ dc %tmp.97 159 12 14 ];
+        symbol [ setColor %tmp.98 159 15 23 ];
+        %tmp.98 = getv function %tmp.97 :setColor;
+        symbol [ COLOR_GOLD_2 %tmp.100 159 24 36 ];
+        %tmp.100 = getv ? :COLOR_GOLD_2;
+        symbol [ Graphics %tmp.101 159 38 46 ];
+        %tmp.101 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.102 159 47 64 ];
+        %tmp.102 = getv %tmp.101 :COLOR_TRANSPARENT;
+        invoke %tmp.97 %tmp.98(%tmp.100, %tmp.102);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 160 12 ]
+        %tmp.103 = lgetv %dc;
+        symbol [ dc %tmp.103 160 12 14 ];
+        symbol [ drawLine %tmp.104 160 15 23 ];
+        %tmp.104 = getv function %tmp.103 :drawLine;
+        %tmp.105 = lgetv %x1.3;
+        symbol [ x1 %tmp.105 160 24 26 ];
+        %tmp.106 = lgetv %y1.4;
+        symbol [ y1 %tmp.106 160 28 30 ];
+        %tmp.107 = lgetv %x2.5;
+        symbol [ x2 %tmp.107 160 32 34 ];
+        %tmp.108 = lgetv %y2.6;
+        symbol [ y2 %tmp.108 160 36 38 ];
+        invoke %tmp.103 %tmp.104(%tmp.105, %tmp.106, %tmp.107, %tmp.108);
+C__Lange970_Lange970_source_Lange970View_mc_152_40_161_8_stop:
+C__Lange970_Lange970_source_Lange970View_mc_152_8_161_8_for_incr:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 152 ]
+        %tmp.109 = lgetv %i.1;
+        symbol [ i %tmp.109 152 32 33 ];
+        %tmp.110 = 1;
+        %tmp.111 = add %tmp.109 %tmp.110;
+        lputv %i.1 %tmp.111;
+        symbol [ i %i.1 152 32 33 ];
+        goto @C__Lange970_Lange970_source_Lange970View_mc_152_8_161_8_for_test;
+C__Lange970_Lange970_source_Lange970View_mc_152_8_161_8_for_end:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 163 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_142_46_177_4_start" "C__Lange970_Lange970_source_Lange970View_mc_142_46_177_4_stop" ]
+        %clock.7 = local;
+        symbol [ clock %clock.7 163 12 17 ];
+        symbol [ System %tmp.112 163 20 26 ];
+        %tmp.112 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.113 163 27 39 ];
+        %tmp.113 = getv function %tmp.112 :getClockTime;
+        %tmp.114 = invoke %tmp.112 %tmp.113();
+        lputv %clock.7 %tmp.114;
+        symbol [ clock %clock.7 163 12 17 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 164 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_142_46_177_4_start" "C__Lange970_Lange970_source_Lange970View_mc_142_46_177_4_stop" ]
+        %hourAngle.8 = local;
+        symbol [ hourAngle %hourAngle.8 164 12 21 ];
+        %tmp.115 = lgetv %clock.7;
+        symbol [ clock %tmp.115 164 26 31 ];
+        symbol [ hour %tmp.116 164 32 36 ];
+        %tmp.116 = getv %tmp.115 :hour;
+        %tmp.117 = 12;
+        %tmp.118 = mod %tmp.116 %tmp.117;
+        %tmp.119 = 30;
+        %tmp.120 = mul %tmp.118 %tmp.119;
+        %tmp.121 = lgetv %clock.7;
+        symbol [ clock %tmp.121 164 52 57 ];
+        symbol [ min %tmp.122 164 58 61 ];
+        %tmp.122 = getv %tmp.121 :min;
+        %tmp.123 = 0.5;
+        %tmp.124 = mul %tmp.122 %tmp.123;
+        %tmp.125 = add %tmp.120 %tmp.124;
+        %tmp.126 = 90;
+        %tmp.127 = sub %tmp.125 %tmp.126;
+        lputv %hourAngle.8 %tmp.127;
+        symbol [ hourAngle %hourAngle.8 164 12 21 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 165 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_142_46_177_4_start" "C__Lange970_Lange970_source_Lange970View_mc_142_46_177_4_stop" ]
+        %minAngle.9 = local;
+        symbol [ minAngle %minAngle.9 165 12 20 ];
+        %tmp.128 = lgetv %clock.7;
+        symbol [ clock %tmp.128 165 24 29 ];
+        symbol [ min %tmp.129 165 30 33 ];
+        %tmp.129 = getv %tmp.128 :min;
+        %tmp.130 = 6;
+        %tmp.131 = mul %tmp.129 %tmp.130;
+        %tmp.132 = 90;
+        %tmp.133 = sub %tmp.131 %tmp.132;
+        lputv %minAngle.9 %tmp.133;
+        symbol [ minAngle %minAngle.9 165 12 20 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 166 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_142_46_177_4_start" "C__Lange970_Lange970_source_Lange970View_mc_142_46_177_4_stop" ]
+        %secAngle.10 = local;
+        symbol [ secAngle %secAngle.10 166 12 20 ];
+        %tmp.134 = lgetv %clock.7;
+        symbol [ clock %tmp.134 166 24 29 ];
+        symbol [ sec %tmp.135 166 30 33 ];
+        %tmp.135 = getv %tmp.134 :sec;
+        %tmp.136 = 6;
+        %tmp.137 = mul %tmp.135 %tmp.136;
+        %tmp.138 = 90;
+        %tmp.139 = sub %tmp.137 %tmp.138;
+        lputv %secAngle.10 %tmp.139;
+        symbol [ secAngle %secAngle.10 166 12 20 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 168 8 ]
+        %tmp.140 = self;
+        symbol [ drawHand %tmp.141 168 8 16 ];
+        %tmp.141 = getv function %tmp.140 :drawHand;
+        %tmp.142 = lgetv %dc;
+        symbol [ dc %tmp.142 168 17 19 ];
+        %tmp.143 = lgetv %cx;
+        symbol [ cx %tmp.143 168 21 23 ];
+        %tmp.144 = lgetv %cy;
+        symbol [ cy %tmp.144 168 25 27 ];
+        %tmp.145 = lgetv %hourAngle.8;
+        symbol [ hourAngle %tmp.145 168 29 38 ];
+        %tmp.146 = lgetv %r;
+        symbol [ r %tmp.146 168 40 41 ];
+        %tmp.147 = 0.42;
+        %tmp.148 = mul %tmp.146 %tmp.147;
+        %tmp.149 = 5;
+        symbol [ COLOR_GOLD_2 %tmp.151 168 53 65 ];
+        %tmp.151 = getv ? :COLOR_GOLD_2;
+        invoke %tmp.140 %tmp.141(%tmp.142, %tmp.143, %tmp.144, %tmp.145, %tmp.148, %tmp.149, %tmp.151);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 169 8 ]
+        %tmp.152 = self;
+        symbol [ drawHand %tmp.153 169 8 16 ];
+        %tmp.153 = getv function %tmp.152 :drawHand;
+        %tmp.154 = lgetv %dc;
+        symbol [ dc %tmp.154 169 17 19 ];
+        %tmp.155 = lgetv %cx;
+        symbol [ cx %tmp.155 169 21 23 ];
+        %tmp.156 = lgetv %cy;
+        symbol [ cy %tmp.156 169 25 27 ];
+        %tmp.157 = lgetv %minAngle.9;
+        symbol [ minAngle %tmp.157 169 29 37 ];
+        %tmp.158 = lgetv %r;
+        symbol [ r %tmp.158 169 39 40 ];
+        %tmp.159 = 0.68;
+        %tmp.160 = mul %tmp.158 %tmp.159;
+        %tmp.161 = 3;
+        symbol [ COLOR_TEXT %tmp.163 169 52 62 ];
+        %tmp.163 = getv ? :COLOR_TEXT;
+        invoke %tmp.152 %tmp.153(%tmp.154, %tmp.155, %tmp.156, %tmp.157, %tmp.160, %tmp.161, %tmp.163);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 171 8 ]
+C__Lange970_Lange970_source_Lange970View_mc_171_8_173_8_if_stmt:
+        symbol [ _isAwake %tmp.165 171 12 20 ];
+        %tmp.165 = getv ? :_isAwake;
+        bf %tmp.165 @C__Lange970_Lange970_source_Lange970View_mc_171_8_173_8_if_end;
+C__Lange970_Lange970_source_Lange970View_mc_171_8_173_8_if_true:
+C__Lange970_Lange970_source_Lange970View_mc_171_22_173_8_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 172 12 ]
+        %tmp.166 = self;
+        symbol [ drawHand %tmp.167 172 12 20 ];
+        %tmp.167 = getv function %tmp.166 :drawHand;
+        %tmp.168 = lgetv %dc;
+        symbol [ dc %tmp.168 172 21 23 ];
+        %tmp.169 = lgetv %cx;
+        symbol [ cx %tmp.169 172 25 27 ];
+        %tmp.170 = lgetv %cy;
+        symbol [ cy %tmp.170 172 29 31 ];
+        %tmp.171 = lgetv %secAngle.10;
+        symbol [ secAngle %tmp.171 172 33 41 ];
+        %tmp.172 = lgetv %r;
+        symbol [ r %tmp.172 172 43 44 ];
+        %tmp.173 = 0.72;
+        %tmp.174 = mul %tmp.172 %tmp.173;
+        %tmp.175 = 1;
+        %tmp.176 = 0xD7C6A4;
+        invoke %tmp.166 %tmp.167(%tmp.168, %tmp.169, %tmp.170, %tmp.171, %tmp.174, %tmp.175, %tmp.176);
+C__Lange970_Lange970_source_Lange970View_mc_171_22_173_8_stop:
+        goto @C__Lange970_Lange970_source_Lange970View_mc_171_8_173_8_if_end;
+C__Lange970_Lange970_source_Lange970View_mc_171_8_173_8_if_end:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 175 8 ]
+        %tmp.177 = lgetv %dc;
+        symbol [ dc %tmp.177 175 8 10 ];
+        symbol [ setColor %tmp.178 175 11 19 ];
+        %tmp.178 = getv function %tmp.177 :setColor;
+        symbol [ COLOR_GOLD_2 %tmp.180 175 20 32 ];
+        %tmp.180 = getv ? :COLOR_GOLD_2;
+        symbol [ COLOR_GOLD_2 %tmp.182 175 34 46 ];
+        %tmp.182 = getv ? :COLOR_GOLD_2;
+        invoke %tmp.177 %tmp.178(%tmp.180, %tmp.182);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 176 8 ]
+        %tmp.183 = lgetv %dc;
+        symbol [ dc %tmp.183 176 8 10 ];
+        symbol [ fillCircle %tmp.184 176 11 21 ];
+        %tmp.184 = getv function %tmp.183 :fillCircle;
+        %tmp.185 = lgetv %cx;
+        symbol [ cx %tmp.185 176 22 24 ];
+        %tmp.186 = lgetv %cy;
+        symbol [ cy %tmp.186 176 26 28 ];
+        %tmp.187 = 6;
+        invoke %tmp.183 %tmp.184(%tmp.185, %tmp.186, %tmp.187);
+C__Lange970_Lange970_source_Lange970View_mc_142_46_177_4_stop:
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 179; @symbol_functiondef = [drawSignature,179,13,26]; @symbol_param<0> = [dc,179,27,29]; @symbol_param<1> = [cx,179,31,33]; @symbol_param<2> = [cy,179,35,37]; ]
+    function drawSignature(dc, cx, cy) {
+C__Lange970_Lange970_source_Lange970View_mc_179_39_182_4_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 180 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 180 8 10 ];
+        symbol [ setColor %tmp.2 180 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ COLOR_MUTED %tmp.4 180 20 31 ];
+        %tmp.4 = getv ? :COLOR_MUTED;
+        symbol [ Graphics %tmp.5 180 33 41 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.6 180 42 59 ];
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 181 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 181 8 10 ];
+        symbol [ drawText %tmp.8 181 11 19 ];
+        %tmp.8 = getv function %tmp.7 :drawText;
+        %tmp.9 = lgetv %cx;
+        symbol [ cx %tmp.9 181 20 22 ];
+        %tmp.10 = 6;
+        %tmp.11 = sub %tmp.9 %tmp.10;
+        %tmp.12 = lgetv %cy;
+        symbol [ cy %tmp.12 181 28 30 ];
+        %tmp.13 = 48;
+        %tmp.14 = add %tmp.12 %tmp.13;
+        symbol [ Graphics %tmp.15 181 37 45 ];
+        %tmp.15 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.16 181 46 56 ];
+        %tmp.16 = getv %tmp.15 :FONT_XTINY;
+        %tmp.17 = "LANGE 970 // V0.1";
+        symbol [ Graphics %tmp.18 181 79 87 ];
+        %tmp.18 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.19 181 88 107 ];
+        %tmp.19 = getv %tmp.18 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.7 %tmp.8(%tmp.11, %tmp.14, %tmp.16, %tmp.17, %tmp.19);
+C__Lange970_Lange970_source_Lange970View_mc_179_39_182_4_stop:
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 184; @symbol_functiondef = [drawHand,184,13,21]; @symbol_param<0> = [dc,184,22,24]; @symbol_param<1> = [cx,184,26,28]; @symbol_param<2> = [cy,184,30,32]; @symbol_param<3> = [deg,184,34,37]; @symbol_param<4> = [len,184,39,42]; @symbol_param<5> = [width,184,44,49]; @symbol_param<6> = [color,184,51,56]; ]
+    function drawHand(dc, cx, cy, deg, len, width, color) {
+C__Lange970_Lange970_source_Lange970View_mc_184_58_191_4_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 185 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_184_58_191_4_start" "C__Lange970_Lange970_source_Lange970View_mc_184_58_191_4_stop" ]
+        %a.1 = local;
+        symbol [ a %a.1 185 12 13 ];
+        %tmp.1 = self;
+        symbol [ degreesToRadians %tmp.2 185 16 32 ];
+        %tmp.2 = getv function %tmp.1 :degreesToRadians;
+        %tmp.3 = lgetv %deg;
+        symbol [ deg %tmp.3 185 33 36 ];
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        lputv %a.1 %tmp.4;
+        symbol [ a %a.1 185 12 13 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 186 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_184_58_191_4_start" "C__Lange970_Lange970_source_Lange970View_mc_184_58_191_4_stop" ]
+        %x.2 = local;
+        symbol [ x %x.2 186 12 13 ];
+        %tmp.5 = lgetv %cx;
+        symbol [ cx %tmp.5 186 16 18 ];
+        symbol [ Math %tmp.6 186 21 25 ];
+        %tmp.6 = getm $.Toybox.Math;
+        symbol [ cos %tmp.7 186 26 29 ];
+        %tmp.7 = getv function %tmp.6 :cos;
+        %tmp.8 = lgetv %a.1;
+        symbol [ a %tmp.8 186 30 31 ];
+        %tmp.9 = invoke %tmp.6 %tmp.7(%tmp.8);
+        %tmp.10 = lgetv %len;
+        symbol [ len %tmp.10 186 35 38 ];
+        %tmp.11 = mul %tmp.9 %tmp.10;
+        %tmp.12 = add %tmp.5 %tmp.11;
+        lputv %x.2 %tmp.12;
+        symbol [ x %x.2 186 12 13 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 187 8 ]
+        [ "C__Lange970_Lange970_source_Lange970View_mc_184_58_191_4_start" "C__Lange970_Lange970_source_Lange970View_mc_184_58_191_4_stop" ]
+        %y.3 = local;
+        symbol [ y %y.3 187 12 13 ];
+        %tmp.13 = lgetv %cy;
+        symbol [ cy %tmp.13 187 16 18 ];
+        symbol [ Math %tmp.14 187 21 25 ];
+        %tmp.14 = getm $.Toybox.Math;
+        symbol [ sin %tmp.15 187 26 29 ];
+        %tmp.15 = getv function %tmp.14 :sin;
+        %tmp.16 = lgetv %a.1;
+        symbol [ a %tmp.16 187 30 31 ];
+        %tmp.17 = invoke %tmp.14 %tmp.15(%tmp.16);
+        %tmp.18 = lgetv %len;
+        symbol [ len %tmp.18 187 35 38 ];
+        %tmp.19 = mul %tmp.17 %tmp.18;
+        %tmp.20 = add %tmp.13 %tmp.19;
+        lputv %y.3 %tmp.20;
+        symbol [ y %y.3 187 12 13 ];
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 188 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 188 8 10 ];
+        symbol [ setPenWidth %tmp.22 188 11 22 ];
+        %tmp.22 = getv function %tmp.21 :setPenWidth;
+        %tmp.23 = lgetv %width;
+        symbol [ width %tmp.23 188 23 28 ];
+        invoke %tmp.21 %tmp.22(%tmp.23);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 189 8 ]
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 189 8 10 ];
+        symbol [ setColor %tmp.25 189 11 19 ];
+        %tmp.25 = getv function %tmp.24 :setColor;
+        %tmp.26 = lgetv %color;
+        symbol [ color %tmp.26 189 20 25 ];
+        symbol [ Graphics %tmp.27 189 27 35 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.28 189 36 53 ];
+        %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+        invoke %tmp.24 %tmp.25(%tmp.26, %tmp.28);
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 190 8 ]
+        %tmp.29 = lgetv %dc;
+        symbol [ dc %tmp.29 190 8 10 ];
+        symbol [ drawLine %tmp.30 190 11 19 ];
+        %tmp.30 = getv function %tmp.29 :drawLine;
+        %tmp.31 = lgetv %cx;
+        symbol [ cx %tmp.31 190 20 22 ];
+        %tmp.32 = lgetv %cy;
+        symbol [ cy %tmp.32 190 24 26 ];
+        %tmp.33 = lgetv %x.2;
+        symbol [ x %tmp.33 190 28 29 ];
+        %tmp.34 = lgetv %y.3;
+        symbol [ y %tmp.34 190 31 32 ];
+        invoke %tmp.29 %tmp.30(%tmp.31, %tmp.32, %tmp.33, %tmp.34);
+C__Lange970_Lange970_source_Lange970View_mc_184_58_191_4_stop:
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 193; @symbol_functiondef = [degreesToRadians,193,13,29]; @symbol_param<0> = [deg,193,30,33]; ]
+    function degreesToRadians(deg) {
+C__Lange970_Lange970_source_Lange970View_mc_193_35_195_4_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 194 8 ]
+        %tmp.1 = lgetv %deg;
+        symbol [ deg %tmp.1 194 15 18 ];
+        %tmp.2 = 3.14159265;
+        %tmp.3 = mul %tmp.1 %tmp.2;
+        %tmp.4 = 180.0;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        ret %tmp.5;
+C__Lange970_Lange970_source_Lange970View_mc_193_35_195_4_stop:
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 197; @symbol_functiondef = [onHide,197,13,19]; ]
+    function onHide() as Void {
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 200; @symbol_functiondef = [onExitSleep,200,13,24]; ]
+    function onExitSleep() as Void {
+C__Lange970_Lange970_source_Lange970View_mc_200_35_203_4_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 201 8 ]
+        %tmp.1 = true;
+        symbol [ _isAwake ? 201 8 16 ];
+        putv self :_isAwake %tmp.1;
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 202 8 ]
+        symbol [ WatchUi %tmp.2 202 8 15 ];
+        %tmp.2 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.3 202 16 29 ];
+        %tmp.3 = getv function %tmp.2 :requestUpdate;
+        invoke %tmp.2 %tmp.3();
+C__Lange970_Lange970_source_Lange970View_mc_200_35_203_4_stop:
+    }
+    [ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 205; @symbol_functiondef = [onEnterSleep,205,13,25]; ]
+    function onEnterSleep() as Void {
+C__Lange970_Lange970_source_Lange970View_mc_205_36_208_4_start:
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 206 8 ]
+        %tmp.1 = false;
+        symbol [ _isAwake ? 206 8 16 ];
+        putv self :_isAwake %tmp.1;
+[ "C:\Lange970\Lange970\source\Lange970View.mc" 207 8 ]
+        symbol [ WatchUi %tmp.2 207 8 15 ];
+        %tmp.2 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.3 207 16 29 ];
+        %tmp.3 = getv function %tmp.2 :requestUpdate;
+        invoke %tmp.2 %tmp.3();
+C__Lange970_Lange970_source_Lange970View_mc_205_36_208_4_stop:
+    }
+}
+[ @file = "C:\Lange970\Lange970\source\Lange970View.mc"; @line = 1; ]
+<init> {
+}

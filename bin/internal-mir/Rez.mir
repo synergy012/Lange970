@@ -1,0 +1,1756 @@
+[ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+module Rez {
+    [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    module Drawables {
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,9,27,39]; @symbol_type<0> = [ResourceId,9,43,53]; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 12; @symbol_moduledef = [Layouts,12,11,18]; ]
+    module Layouts {
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 13; @symbol_functiondef = [WatchFace,13,17,26]; @symbol_param<0> = [dc,13,27,29]; @symbol_param<0>_type<0> = [Graphics,13,33,41]; @symbol_param<0>_type<1> = [Dc,13,42,44]; @symbol_return<0> = [Array,13,49,54]; @symbol_return<1> = [WatchUi,13,55,62]; @symbol_return<2> = [Drawable,13,63,71]; ]
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+c__Lange970_Lange970_bin_gen_006_B4565_00_source_Rez_mcgen_13_73_17_8_start:
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 14 12 ]
+            [ "c__Lange970_Lange970_bin_gen_006_B4565_00_source_Rez_mcgen_13_73_17_8_start" "c__Lange970_Lange970_bin_gen_006_B4565_00_source_Rez_mcgen_13_73_17_8_stop" ]
+            %rez_cmp_local_text_TimeLabel.1 = local;
+            symbol [ rez_cmp_local_text_TimeLabel %rez_cmp_local_text_TimeLabel.1 14 16 44 ];
+            symbol [ WatchUi %tmp.3 14 51 58 ];
+            %tmp.3 = getm $.Toybox.WatchUi;
+            symbol [ Text %tmp.4 14 59 63 ];
+            %tmp.4 = getv function ? %tmp.3 :Text;
+            %tmp.5 = newd 6;
+            %tmp.7 = const :identifier;
+            symbol [ identifier %tmp.7 14 66 76 const ];
+            %tmp.8 = "TimeLabel";
+            %tmp.9 = dup %tmp.5;
+            %tmp.10 = aputv %tmp.9 %tmp.7 %tmp.8;
+            %tmp.12 = const :color;
+            symbol [ color %tmp.12 14 92 97 const ];
+            symbol [ Graphics %tmp.13 14 99 107 ];
+            %tmp.13 = getm $.Toybox.Graphics;
+            symbol [ COLOR_BLUE %tmp.14 14 108 118 ];
+            %tmp.14 = getv %tmp.13 :COLOR_BLUE;
+            %tmp.15 = dup %tmp.10;
+            %tmp.16 = aputv %tmp.15 %tmp.12 %tmp.14;
+            %tmp.18 = const :locX;
+            symbol [ locX %tmp.18 14 121 125 const ];
+            %tmp.19 = lgetv %dc;
+            symbol [ dc %tmp.19 14 128 130 ];
+            symbol [ getWidth %tmp.20 14 131 139 ];
+            %tmp.20 = getv function %tmp.19 :getWidth;
+            %tmp.21 = invoke %tmp.19 %tmp.20();
+            %tmp.22 = 0.5;
+            %tmp.23 = mul %tmp.21 %tmp.22;
+            %tmp.24 = dup %tmp.16;
+            %tmp.25 = aputv %tmp.24 %tmp.18 %tmp.23;
+            %tmp.27 = const :locY;
+            symbol [ locY %tmp.27 14 151 155 const ];
+            %tmp.28 = lgetv %dc;
+            symbol [ dc %tmp.28 14 159 161 ];
+            symbol [ getHeight %tmp.29 14 162 171 ];
+            %tmp.29 = getv function %tmp.28 :getHeight;
+            %tmp.30 = invoke %tmp.28 %tmp.29();
+            %tmp.31 = lgetv %dc;
+            symbol [ dc %tmp.31 14 176 178 ];
+            symbol [ getFontHeight %tmp.32 14 179 192 ];
+            %tmp.32 = getv function %tmp.31 :getFontHeight;
+            symbol [ Graphics %tmp.33 14 193 201 ];
+            %tmp.33 = getm $.Toybox.Graphics;
+            symbol [ FONT_LARGE %tmp.34 14 202 212 ];
+            %tmp.34 = getv %tmp.33 :FONT_LARGE;
+            %tmp.35 = invoke %tmp.31 %tmp.32(%tmp.34);
+            %tmp.36 = sub %tmp.30 %tmp.35;
+            %tmp.37 = 0.5;
+            %tmp.38 = mul %tmp.36 %tmp.37;
+            %tmp.39 = dup %tmp.25;
+            %tmp.40 = aputv %tmp.39 %tmp.27 %tmp.38;
+            %tmp.42 = const :justification;
+            symbol [ justification %tmp.42 14 224 237 const ];
+            symbol [ Graphics %tmp.43 14 239 247 ];
+            %tmp.43 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.44 14 248 267 ];
+            %tmp.44 = getv %tmp.43 :TEXT_JUSTIFY_CENTER;
+            %tmp.45 = dup %tmp.40;
+            %tmp.46 = aputv %tmp.45 %tmp.42 %tmp.44;
+            %tmp.48 = const :font;
+            symbol [ font %tmp.48 14 270 274 const ];
+            symbol [ Graphics %tmp.49 14 276 284 ];
+            %tmp.49 = getm $.Toybox.Graphics;
+            symbol [ FONT_LARGE %tmp.50 14 285 295 ];
+            %tmp.50 = getv %tmp.49 :FONT_LARGE;
+            %tmp.51 = dup %tmp.46;
+            %tmp.52 = aputv %tmp.51 %tmp.48 %tmp.50;
+            %tmp.1 = newc %tmp.4 (%tmp.52);
+            lputv %rez_cmp_local_text_TimeLabel.1 %tmp.1;
+            symbol [ rez_cmp_local_text_TimeLabel %rez_cmp_local_text_TimeLabel.1 14 16 44 ];
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 16 12 ]
+            %tmp.53 = newa 1 Array<WatchUi.Drawable>;
+            symbol [ Array %tmp.53 16 53 58 ];
+            symbol [ WatchUi %tmp.53 16 59 66 ];
+            symbol [ Drawable %tmp.53 16 67 75 ];
+            %tmp.54 = lgetv %rez_cmp_local_text_TimeLabel.1;
+            symbol [ rez_cmp_local_text_TimeLabel %tmp.54 16 20 48 ];
+            %tmp.55 = dup %tmp.53;
+            %tmp.56 = aputv %tmp.55 0 %tmp.54;
+            ret %tmp.56;
+c__Lange970_Lange970_bin_gen_006_B4565_00_source_Rez_mcgen_13_73_17_8_stop:
+        }
+    }
+    [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 20; @symbol_moduledef = [Strings,20,11,18]; ]
+    module Strings {
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 20; ]
+        <init> {
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 21; @position = 27; initialized = true; @symbol_vardef = [AppName,21,27,34]; @symbol_type<0> = [ResourceId,21,38,48]; ]
+        var AppName as ResourceId;
+    }
+    [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 24; @symbol_moduledef = [Styles,24,11,17]; ]
+    module Styles {
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 24; ]
+        <init> {
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 25; @symbol_moduledef = [prompt_font_enhanced_readability__body_with_title,25,15,64]; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 25; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 26 18 ]
+                symbol [ Graphics %tmp.57 26 34 42 ];
+                %tmp.57 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.58 26 43 62 ];
+                %tmp.58 = getv %tmp.57 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.59 26 63 71 ];
+                %tmp.59 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.60 26 72 92 ];
+                %tmp.60 = getv %tmp.59 :TEXT_JUSTIFY_VCENTER;
+                %tmp.61 = bitor %tmp.58 %tmp.60;
+                putv self :justification %tmp.61;
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 27 18 ]
+                symbol [ Graphics %tmp.62 27 25 33 ];
+                %tmp.62 = getm $.Toybox.Graphics;
+                symbol [ FONT_SMALL %tmp.63 27 34 44 ];
+                %tmp.63 = getv %tmp.62 :FONT_SMALL;
+                putv self :font %tmp.63;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 26; @position = 18; @symbol_constdef = [justification,26,18,31]; ]
+            const justification;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 27; @position = 18; @symbol_constdef = [font,27,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 30; @symbol_moduledef = [system_size__menu_header,30,15,39]; ]
+        module system_size__menu_header {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 30; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 31; @position = 18; @symbol_constdef = [width,31,18,23]; @symbol_type<0> = [Number,31,27,33]; ]
+            const width as Number = 454;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 32; @position = 18; @symbol_constdef = [height,32,18,24]; @symbol_type<0> = [Number,32,28,34]; ]
+            const height as Number = 172;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 35; @symbol_moduledef = [system_loc__hint_button_left_bottom,35,15,50]; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 35; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 36; @position = 18; @symbol_constdef = [x,36,18,19]; @symbol_type<0> = [Number,36,23,29]; ]
+            const x as Number = 16;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 37; @position = 18; @symbol_constdef = [y,37,18,19]; @symbol_type<0> = [Number,37,23,29]; ]
+            const y as Number = 284;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 40; @symbol_moduledef = [prompt_font_enhanced_readability__body_no_title,40,15,62]; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 40; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 41 18 ]
+                symbol [ Graphics %tmp.64 41 34 42 ];
+                %tmp.64 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.65 41 43 62 ];
+                %tmp.65 = getv %tmp.64 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.66 41 63 71 ];
+                %tmp.66 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.67 41 72 92 ];
+                %tmp.67 = getv %tmp.66 :TEXT_JUSTIFY_VCENTER;
+                %tmp.68 = bitor %tmp.65 %tmp.67;
+                putv self :justification %tmp.68;
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 42 18 ]
+                symbol [ Graphics %tmp.69 42 25 33 ];
+                %tmp.69 = getm $.Toybox.Graphics;
+                symbol [ FONT_SMALL %tmp.70 42 34 44 ];
+                %tmp.70 = getv %tmp.69 :FONT_SMALL;
+                putv self :font %tmp.70;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 41; @position = 18; @symbol_constdef = [justification,41,18,31]; ]
+            const justification;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 42; @position = 18; @symbol_constdef = [font,42,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 45; @symbol_moduledef = [prompt_loc__body_no_title,45,15,40]; ]
+        module prompt_loc__body_no_title {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 45; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 46; @position = 18; @symbol_constdef = [x,46,18,19]; @symbol_type<0> = [Number,46,23,29]; ]
+            const x as Number = 76;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 47; @position = 18; @symbol_constdef = [y,47,18,19]; @symbol_type<0> = [Number,47,23,29]; ]
+            const y as Number = 70;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 50; @symbol_moduledef = [system_icon_dark__about,50,15,38]; ]
+        module system_icon_dark__about {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 50; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 51; @position = 18; @symbol_constdef = [filename,51,18,26]; @symbol_type<0> = [String,51,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__about.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 52; @position = 18; @symbol_constdef = [compress,52,18,26]; @symbol_type<0> = [String,52,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 53; @position = 18; @symbol_constdef = [dithering,53,18,27]; @symbol_type<0> = [String,53,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 54; @position = 18; @symbol_constdef = [automaticPalette,54,18,34]; @symbol_type<0> = [String,54,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 55; @position = 18; @symbol_constdef = [packingFormat,55,18,31]; @symbol_type<0> = [String,55,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 58; @symbol_moduledef = [system_icon_light__question,58,15,42]; ]
+        module system_icon_light__question {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 58; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 59; @position = 18; @symbol_constdef = [filename,59,18,26]; @symbol_type<0> = [String,59,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__question.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 60; @position = 18; @symbol_constdef = [compress,60,18,26]; @symbol_type<0> = [String,60,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 61; @position = 18; @symbol_constdef = [dithering,61,18,27]; @symbol_type<0> = [String,61,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 62; @position = 18; @symbol_constdef = [automaticPalette,62,18,34]; @symbol_type<0> = [String,62,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 63; @position = 18; @symbol_constdef = [packingFormat,63,18,31]; @symbol_type<0> = [String,63,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 66; @symbol_moduledef = [system_loc__hint_button_left_top,66,15,47]; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 66; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 67; @position = 18; @symbol_constdef = [exclude,67,18,25]; @symbol_type<0> = [Boolean,67,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 70; @symbol_moduledef = [prompt_font__title,70,15,33]; ]
+        module prompt_font__title {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 70; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 71 18 ]
+                symbol [ Graphics %tmp.71 71 34 42 ];
+                %tmp.71 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.72 71 43 62 ];
+                %tmp.72 = getv %tmp.71 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.73 71 63 71 ];
+                %tmp.73 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.74 71 72 92 ];
+                %tmp.74 = getv %tmp.73 :TEXT_JUSTIFY_VCENTER;
+                %tmp.75 = bitor %tmp.72 %tmp.74;
+                putv self :justification %tmp.75;
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 72 18 ]
+                symbol [ Graphics %tmp.76 72 25 33 ];
+                %tmp.76 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.77 72 34 43 ];
+                %tmp.77 = getv %tmp.76 :FONT_TINY;
+                putv self :font %tmp.77;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 71; @position = 18; @symbol_constdef = [justification,71,18,31]; ]
+            const justification;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 72; @position = 18; @symbol_constdef = [font,72,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 75; @symbol_moduledef = [system_icon_dark__discard,75,15,40]; ]
+        module system_icon_dark__discard {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 75; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 76; @position = 18; @symbol_constdef = [filename,76,18,26]; @symbol_type<0> = [String,76,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__discard.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 77; @position = 18; @symbol_constdef = [compress,77,18,26]; @symbol_type<0> = [String,77,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 78; @position = 18; @symbol_constdef = [dithering,78,18,27]; @symbol_type<0> = [String,78,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 79; @position = 18; @symbol_constdef = [automaticPalette,79,18,34]; @symbol_type<0> = [String,79,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 80; @position = 18; @symbol_constdef = [packingFormat,80,18,31]; @symbol_type<0> = [String,80,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 83; @symbol_moduledef = [system_size__menu_item,83,15,37]; ]
+        module system_size__menu_item {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 83; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 84; @position = 18; @symbol_constdef = [width,84,18,23]; @symbol_type<0> = [Number,84,27,33]; ]
+            const width as Number = 454;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 85; @position = 18; @symbol_constdef = [height,85,18,24]; @symbol_type<0> = [Number,85,28,34]; ]
+            const height as Number = 108;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 88; @symbol_moduledef = [system_color_dark__text,88,15,38]; ]
+        module system_color_dark__text {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 88; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 90 18 ]
+                symbol [ Graphics %tmp.78 90 31 39 ];
+                %tmp.78 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.79 90 40 57 ];
+                %tmp.79 = getv %tmp.78 :COLOR_TRANSPARENT;
+                putv self :background %tmp.79;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 89; @position = 18; @symbol_constdef = [color,89,18,23]; @symbol_type<0> = [Number,89,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 90; @position = 18; @symbol_constdef = [background,90,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 93; @symbol_moduledef = [system_icon_destructive__discard,93,15,47]; ]
+        module system_icon_destructive__discard {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 93; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 94; @position = 18; @symbol_constdef = [filename,94,18,26]; @symbol_type<0> = [String,94,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_destructive__discard.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 95; @position = 18; @symbol_constdef = [dithering,95,18,27]; @symbol_type<0> = [String,95,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 96; @position = 18; @symbol_constdef = [packingFormat,96,18,31]; @symbol_type<0> = [String,96,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 99; @symbol_moduledef = [system_icon_dark__hint_action_menu,99,15,49]; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 99; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 100; @position = 18; @symbol_constdef = [filename,100,18,26]; @symbol_type<0> = [String,100,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 101; @position = 18; @symbol_constdef = [dithering,101,18,27]; @symbol_type<0> = [String,101,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 102; @position = 18; @symbol_constdef = [packingFormat,102,18,31]; @symbol_type<0> = [String,102,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 105; @symbol_moduledef = [prompt_size__title,105,15,33]; ]
+        module prompt_size__title {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 105; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 106; @position = 18; @symbol_constdef = [width,106,18,23]; @symbol_type<0> = [Number,106,27,33]; ]
+            const width as Number = 287;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 107; @position = 18; @symbol_constdef = [height,107,18,24]; @symbol_type<0> = [Number,107,28,34]; ]
+            const height as Number = 97;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 110; @symbol_moduledef = [confirmation_font__body,110,15,38]; ]
+        module confirmation_font__body {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 110; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 111 18 ]
+                symbol [ Graphics %tmp.80 111 34 42 ];
+                %tmp.80 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.81 111 43 62 ];
+                %tmp.81 = getv %tmp.80 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.82 111 63 71 ];
+                %tmp.82 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.83 111 72 92 ];
+                %tmp.83 = getv %tmp.82 :TEXT_JUSTIFY_VCENTER;
+                %tmp.84 = bitor %tmp.81 %tmp.83;
+                putv self :justification %tmp.84;
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 112 18 ]
+                symbol [ Graphics %tmp.85 112 25 33 ];
+                %tmp.85 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.86 112 34 43 ];
+                %tmp.86 = getv %tmp.85 :FONT_TINY;
+                putv self :font %tmp.86;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 111; @position = 18; @symbol_constdef = [justification,111,18,31]; ]
+            const justification;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 112; @position = 18; @symbol_constdef = [font,112,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 115; @symbol_moduledef = [system_color_dark__background,115,15,44]; ]
+        module system_color_dark__background {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 115; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 116; @position = 18; @symbol_constdef = [color,116,18,23]; @symbol_type<0> = [Number,116,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 117; @position = 18; @symbol_constdef = [background,117,18,28]; @symbol_type<0> = [Number,117,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 120; @symbol_moduledef = [system_icon_destructive__hint_button_left_top,120,15,60]; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 120; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 121; @position = 18; @symbol_constdef = [filename,121,18,26]; @symbol_type<0> = [String,121,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_destructive__hint_button_left_top.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 122; @position = 18; @symbol_constdef = [dithering,122,18,27]; @symbol_type<0> = [String,122,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 123; @position = 18; @symbol_constdef = [packingFormat,123,18,31]; @symbol_type<0> = [String,123,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 126; @symbol_moduledef = [system_size__launch_icon,126,15,39]; ]
+        module system_size__launch_icon {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 126; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 127; @position = 18; @symbol_constdef = [scaleX,127,18,24]; @symbol_type<0> = [Number,127,28,34]; ]
+            const scaleX as Number = 65;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 128; @position = 18; @symbol_constdef = [scaleY,128,18,24]; @symbol_type<0> = [Number,128,28,34]; ]
+            const scaleY as Number = 65;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 129; @position = 18; @symbol_constdef = [scaleRelativeTo,129,18,33]; @symbol_type<0> = [String,129,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 132; @symbol_moduledef = [confirmation_input__confirm,132,15,42]; ]
+        module confirmation_input__confirm {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 132; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 133 18 ]
+                symbol [ WatchUi %tmp.87 133 27 34 ];
+                %tmp.87 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.88 133 35 44 ];
+                %tmp.88 = getv %tmp.87 :KEY_ENTER;
+                putv self :button %tmp.88;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 133; @position = 18; @symbol_constdef = [button,133,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 136; @symbol_moduledef = [prompt_font__body_with_title,136,15,43]; ]
+        module prompt_font__body_with_title {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 136; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 137 18 ]
+                symbol [ Graphics %tmp.89 137 34 42 ];
+                %tmp.89 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.90 137 43 62 ];
+                %tmp.90 = getv %tmp.89 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.90;
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 138 18 ]
+                symbol [ Graphics %tmp.91 138 25 33 ];
+                %tmp.91 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.92 138 34 44 ];
+                %tmp.92 = getv %tmp.91 :FONT_XTINY;
+                putv self :font %tmp.92;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 137; @position = 18; @symbol_constdef = [justification,137,18,31]; ]
+            const justification;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 138; @position = 18; @symbol_constdef = [font,138,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 141; @symbol_moduledef = [confirmation_loc__body,141,15,37]; ]
+        module confirmation_loc__body {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 141; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 142; @position = 18; @symbol_constdef = [x,142,18,19]; @symbol_type<0> = [Number,142,23,29]; ]
+            const x as Number = 70;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 143; @position = 18; @symbol_constdef = [y,143,18,19]; @symbol_type<0> = [Number,143,23,29]; ]
+            const y as Number = 104;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 146; @symbol_moduledef = [system_icon_destructive__hint_button_left_bottom,146,15,63]; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 146; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 147; @position = 18; @symbol_constdef = [filename,147,18,26]; @symbol_type<0> = [String,147,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_destructive__hint_button_left_bottom.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 148; @position = 18; @symbol_constdef = [dithering,148,18,27]; @symbol_type<0> = [String,148,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 149; @position = 18; @symbol_constdef = [packingFormat,149,18,31]; @symbol_type<0> = [String,149,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 152; @symbol_moduledef = [prompt_color_dark__background,152,15,44]; ]
+        module prompt_color_dark__background {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 152; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 153; @position = 18; @symbol_constdef = [color,153,18,23]; @symbol_type<0> = [Number,153,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 154; @position = 18; @symbol_constdef = [background,154,18,28]; @symbol_type<0> = [Number,154,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 157; @symbol_moduledef = [system_icon_destructive__hint_action_menu,157,15,56]; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 157; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 158; @position = 18; @symbol_constdef = [filename,158,18,26]; @symbol_type<0> = [String,158,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 159; @position = 18; @symbol_constdef = [dithering,159,18,27]; @symbol_type<0> = [String,159,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 160; @position = 18; @symbol_constdef = [packingFormat,160,18,31]; @symbol_type<0> = [String,160,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 163; @symbol_moduledef = [system_loc__hint_action_menu,163,15,43]; ]
+        module system_loc__hint_action_menu {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 163; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 164; @position = 18; @symbol_constdef = [x,164,18,19]; @symbol_type<0> = [Number,164,23,29]; ]
+            const x as Number = 379;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 165; @position = 18; @symbol_constdef = [y,165,18,19]; @symbol_type<0> = [Number,165,23,29]; ]
+            const y as Number = 89;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 168; @symbol_moduledef = [confirmation_icon__hint_confirm,168,15,46]; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 168; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 169; @position = 18; @symbol_constdef = [filename,169,18,26]; @symbol_type<0> = [String,169,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 170; @position = 18; @symbol_constdef = [dithering,170,18,27]; @symbol_type<0> = [String,170,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 171; @position = 18; @symbol_constdef = [packingFormat,171,18,31]; @symbol_type<0> = [String,171,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 174; @symbol_moduledef = [system_loc__hint_button_left_middle,174,15,50]; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 174; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 175; @position = 18; @symbol_constdef = [x,175,18,19]; @symbol_type<0> = [Number,175,23,29]; ]
+            const x as Number = 3;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 176; @position = 18; @symbol_constdef = [y,176,18,19]; @symbol_type<0> = [Number,176,23,29]; ]
+            const y as Number = 184;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 179; @symbol_moduledef = [prompt_size__body_no_title,179,15,41]; ]
+        module prompt_size__body_no_title {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 179; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 180; @position = 18; @symbol_constdef = [width,180,18,23]; @symbol_type<0> = [Number,180,27,33]; ]
+            const width as Number = 302;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 181; @position = 18; @symbol_constdef = [height,181,18,24]; @symbol_type<0> = [Number,181,28,34]; ]
+            const height as Number = 315;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 184; @symbol_moduledef = [system_icon_light__hint_button_left_top,184,15,54]; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 184; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 185; @position = 18; @symbol_constdef = [filename,185,18,26]; @symbol_type<0> = [String,185,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__hint_button_left_top.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 186; @position = 18; @symbol_constdef = [dithering,186,18,27]; @symbol_type<0> = [String,186,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 187; @position = 18; @symbol_constdef = [packingFormat,187,18,31]; @symbol_type<0> = [String,187,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 190; @symbol_moduledef = [prompt_color_light__background,190,15,45]; ]
+        module prompt_color_light__background {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 190; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 191; @position = 18; @symbol_constdef = [color,191,18,23]; @symbol_type<0> = [Number,191,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 192; @position = 18; @symbol_constdef = [background,192,18,28]; @symbol_type<0> = [Number,192,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 195; @symbol_moduledef = [confirmation_input__delete,195,15,41]; ]
+        module confirmation_input__delete {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 195; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 196 18 ]
+                symbol [ WatchUi %tmp.93 196 27 34 ];
+                %tmp.93 = getm $.Toybox.WatchUi;
+                symbol [ KEY_DOWN %tmp.94 196 35 43 ];
+                %tmp.94 = getv %tmp.93 :KEY_DOWN;
+                putv self :button %tmp.94;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 196; @position = 18; @symbol_constdef = [button,196,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 199; @symbol_moduledef = [system_icon_dark__hint_button_left_top,199,15,53]; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 199; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 200; @position = 18; @symbol_constdef = [filename,200,18,26]; @symbol_type<0> = [String,200,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__hint_button_left_top.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 201; @position = 18; @symbol_constdef = [dithering,201,18,27]; @symbol_type<0> = [String,201,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 202; @position = 18; @symbol_constdef = [packingFormat,202,18,31]; @symbol_type<0> = [String,202,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 205; @symbol_moduledef = [system_input__action_menu,205,15,40]; ]
+        module system_input__action_menu {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 205; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 206 18 ]
+                symbol [ WatchUi %tmp.95 206 27 34 ];
+                %tmp.95 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.96 206 35 44 ];
+                %tmp.96 = getv %tmp.95 :KEY_ENTER;
+                putv self :button %tmp.96;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 206; @position = 18; @symbol_constdef = [button,206,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 209; @symbol_moduledef = [system_icon_light__save,209,15,38]; ]
+        module system_icon_light__save {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 209; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 210; @position = 18; @symbol_constdef = [filename,210,18,26]; @symbol_type<0> = [String,210,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__save.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 211; @position = 18; @symbol_constdef = [compress,211,18,26]; @symbol_type<0> = [String,211,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 212; @position = 18; @symbol_constdef = [dithering,212,18,27]; @symbol_type<0> = [String,212,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 213; @position = 18; @symbol_constdef = [automaticPalette,213,18,34]; @symbol_type<0> = [String,213,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 214; @position = 18; @symbol_constdef = [packingFormat,214,18,31]; @symbol_type<0> = [String,214,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 217; @symbol_moduledef = [prompt_color_light__body,217,15,39]; ]
+        module prompt_color_light__body {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 217; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 219 18 ]
+                symbol [ Graphics %tmp.97 219 31 39 ];
+                %tmp.97 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.98 219 40 57 ];
+                %tmp.98 = getv %tmp.97 :COLOR_TRANSPARENT;
+                putv self :background %tmp.98;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 218; @position = 18; @symbol_constdef = [color,218,18,23]; @symbol_type<0> = [Number,218,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 219; @position = 18; @symbol_constdef = [background,219,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 222; @symbol_moduledef = [system_loc__subwindow,222,15,36]; ]
+        module system_loc__subwindow {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 222; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 223; @position = 18; @symbol_constdef = [exclude,223,18,25]; @symbol_type<0> = [Boolean,223,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 226; @symbol_moduledef = [system_icon_light__warning,226,15,41]; ]
+        module system_icon_light__warning {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 226; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 227; @position = 18; @symbol_constdef = [filename,227,18,26]; @symbol_type<0> = [String,227,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__warning.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 228; @position = 18; @symbol_constdef = [compress,228,18,26]; @symbol_type<0> = [String,228,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 229; @position = 18; @symbol_constdef = [dithering,229,18,27]; @symbol_type<0> = [String,229,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 230; @position = 18; @symbol_constdef = [automaticPalette,230,18,34]; @symbol_type<0> = [String,230,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 231; @position = 18; @symbol_constdef = [packingFormat,231,18,31]; @symbol_type<0> = [String,231,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 234; @symbol_moduledef = [confirmation_color_light__body,234,15,45]; ]
+        module confirmation_color_light__body {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 234; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 236 18 ]
+                symbol [ Graphics %tmp.99 236 31 39 ];
+                %tmp.99 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.100 236 40 57 ];
+                %tmp.100 = getv %tmp.99 :COLOR_TRANSPARENT;
+                putv self :background %tmp.100;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 235; @position = 18; @symbol_constdef = [color,235,18,23]; @symbol_type<0> = [Number,235,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 236; @position = 18; @symbol_constdef = [background,236,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 239; @symbol_moduledef = [confirmation_icon_light__hint_keep,239,15,49]; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 239; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 240; @position = 18; @symbol_constdef = [filename,240,18,26]; @symbol_type<0> = [String,240,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 241; @position = 18; @symbol_constdef = [dithering,241,18,27]; @symbol_type<0> = [String,241,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 242; @position = 18; @symbol_constdef = [packingFormat,242,18,31]; @symbol_type<0> = [String,242,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 245; @symbol_moduledef = [activity_color_light__background,245,15,47]; ]
+        module activity_color_light__background {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 245; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 246; @position = 18; @symbol_constdef = [color,246,18,23]; @symbol_type<0> = [Number,246,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 247; @position = 18; @symbol_constdef = [background,247,18,28]; @symbol_type<0> = [Number,247,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 250; @symbol_moduledef = [system_icon_positive__hint_button_right_top,250,15,58]; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 250; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 251; @position = 18; @symbol_constdef = [filename,251,18,26]; @symbol_type<0> = [String,251,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_positive__hint_button_right_top.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 252; @position = 18; @symbol_constdef = [dithering,252,18,27]; @symbol_type<0> = [String,252,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 253; @position = 18; @symbol_constdef = [packingFormat,253,18,31]; @symbol_type<0> = [String,253,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 256; @symbol_moduledef = [system_size__screen,256,15,34]; ]
+        module system_size__screen {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 256; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 257; @position = 18; @symbol_constdef = [width,257,18,23]; @symbol_type<0> = [Number,257,27,33]; ]
+            const width as Number = 454;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 258; @position = 18; @symbol_constdef = [height,258,18,24]; @symbol_type<0> = [Number,258,28,34]; ]
+            const height as Number = 454;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 261; @symbol_moduledef = [system_icon_destructive__hint_button_right_bottom,261,15,64]; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 261; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 262; @position = 18; @symbol_constdef = [filename,262,18,26]; @symbol_type<0> = [String,262,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_destructive__hint_button_right_bottom.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 263; @position = 18; @symbol_constdef = [dithering,263,18,27]; @symbol_type<0> = [String,263,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 264; @position = 18; @symbol_constdef = [packingFormat,264,18,31]; @symbol_type<0> = [String,264,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 267; @symbol_moduledef = [system_color_light__background,267,15,45]; ]
+        module system_color_light__background {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 267; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 268; @position = 18; @symbol_constdef = [color,268,18,23]; @symbol_type<0> = [Number,268,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 269; @position = 18; @symbol_constdef = [background,269,18,28]; @symbol_type<0> = [Number,269,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 272; @symbol_moduledef = [system_icon_destructive__hint_button_right_top,272,15,61]; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 272; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 273; @position = 18; @symbol_constdef = [filename,273,18,26]; @symbol_type<0> = [String,273,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 274; @position = 18; @symbol_constdef = [dithering,274,18,27]; @symbol_type<0> = [String,274,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 275; @position = 18; @symbol_constdef = [packingFormat,275,18,31]; @symbol_type<0> = [String,275,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 278; @symbol_moduledef = [confirmation_loc__hint_confirm,278,15,45]; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 278; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 279; @position = 18; @symbol_constdef = [x,279,18,19]; @symbol_type<0> = [Number,279,23,29]; ]
+            const x as Number = 379;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 280; @position = 18; @symbol_constdef = [y,280,18,19]; @symbol_type<0> = [Number,280,23,29]; ]
+            const y as Number = 89;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 283; @symbol_moduledef = [activity_color_dark__text,283,15,40]; ]
+        module activity_color_dark__text {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 283; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 285 18 ]
+                symbol [ Graphics %tmp.101 285 31 39 ];
+                %tmp.101 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.102 285 40 57 ];
+                %tmp.102 = getv %tmp.101 :COLOR_TRANSPARENT;
+                putv self :background %tmp.102;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 284; @position = 18; @symbol_constdef = [color,284,18,23]; @symbol_type<0> = [Number,284,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 285; @position = 18; @symbol_constdef = [background,285,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 288; @symbol_moduledef = [confirmation_input__keep,288,15,39]; ]
+        module confirmation_input__keep {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 288; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 289 18 ]
+                symbol [ WatchUi %tmp.103 289 27 34 ];
+                %tmp.103 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ESC %tmp.104 289 35 42 ];
+                %tmp.104 = getv %tmp.103 :KEY_ESC;
+                putv self :button %tmp.104;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 289; @position = 18; @symbol_constdef = [button,289,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 292; @symbol_moduledef = [prompt_loc__body_with_title,292,15,42]; ]
+        module prompt_loc__body_with_title {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 292; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 293; @position = 18; @symbol_constdef = [x,293,18,19]; @symbol_type<0> = [Number,293,23,29]; ]
+            const x as Number = 76;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 294; @position = 18; @symbol_constdef = [y,294,18,19]; @symbol_type<0> = [Number,294,23,29]; ]
+            const y as Number = 131;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 297; @symbol_moduledef = [system_icon_dark__search,297,15,39]; ]
+        module system_icon_dark__search {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 297; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 298; @position = 18; @symbol_constdef = [filename,298,18,26]; @symbol_type<0> = [String,298,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__search.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 299; @position = 18; @symbol_constdef = [compress,299,18,26]; @symbol_type<0> = [String,299,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 300; @position = 18; @symbol_constdef = [dithering,300,18,27]; @symbol_type<0> = [String,300,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 301; @position = 18; @symbol_constdef = [automaticPalette,301,18,34]; @symbol_type<0> = [String,301,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 302; @position = 18; @symbol_constdef = [packingFormat,302,18,31]; @symbol_type<0> = [String,302,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 305; @symbol_moduledef = [activity_color_light__text,305,15,41]; ]
+        module activity_color_light__text {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 305; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 307 18 ]
+                symbol [ Graphics %tmp.105 307 31 39 ];
+                %tmp.105 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.106 307 40 57 ];
+                %tmp.106 = getv %tmp.105 :COLOR_TRANSPARENT;
+                putv self :background %tmp.106;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 306; @position = 18; @symbol_constdef = [color,306,18,23]; @symbol_type<0> = [Number,306,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 307; @position = 18; @symbol_constdef = [background,307,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 310; @symbol_moduledef = [confirmation_icon__hint_keep,310,15,43]; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 310; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 311; @position = 18; @symbol_constdef = [filename,311,18,26]; @symbol_type<0> = [String,311,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 312; @position = 18; @symbol_constdef = [dithering,312,18,27]; @symbol_type<0> = [String,312,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 313; @position = 18; @symbol_constdef = [packingFormat,313,18,31]; @symbol_type<0> = [String,313,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 316; @symbol_moduledef = [system_icon_dark__save,316,15,37]; ]
+        module system_icon_dark__save {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 316; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 317; @position = 18; @symbol_constdef = [filename,317,18,26]; @symbol_type<0> = [String,317,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__save.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 318; @position = 18; @symbol_constdef = [compress,318,18,26]; @symbol_type<0> = [String,318,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 319; @position = 18; @symbol_constdef = [dithering,319,18,27]; @symbol_type<0> = [String,319,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 320; @position = 18; @symbol_constdef = [automaticPalette,320,18,34]; @symbol_type<0> = [String,320,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 321; @position = 18; @symbol_constdef = [packingFormat,321,18,31]; @symbol_type<0> = [String,321,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 324; @symbol_moduledef = [system_icon_destructive__hint_button_left_middle,324,15,63]; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 324; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 325; @position = 18; @symbol_constdef = [filename,325,18,26]; @symbol_type<0> = [String,325,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_destructive__hint_button_left_middle.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 326; @position = 18; @symbol_constdef = [dithering,326,18,27]; @symbol_type<0> = [String,326,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 327; @position = 18; @symbol_constdef = [packingFormat,327,18,31]; @symbol_type<0> = [String,327,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 330; @symbol_moduledef = [system_icon_light__search,330,15,40]; ]
+        module system_icon_light__search {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 330; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 331; @position = 18; @symbol_constdef = [filename,331,18,26]; @symbol_type<0> = [String,331,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__search.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 332; @position = 18; @symbol_constdef = [compress,332,18,26]; @symbol_type<0> = [String,332,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 333; @position = 18; @symbol_constdef = [dithering,333,18,27]; @symbol_type<0> = [String,333,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 334; @position = 18; @symbol_constdef = [automaticPalette,334,18,34]; @symbol_type<0> = [String,334,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 335; @position = 18; @symbol_constdef = [packingFormat,335,18,31]; @symbol_type<0> = [String,335,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 338; @symbol_moduledef = [system_icon_dark__hint_button_left_bottom,338,15,56]; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 338; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 339; @position = 18; @symbol_constdef = [filename,339,18,26]; @symbol_type<0> = [String,339,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__hint_button_left_bottom.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 340; @position = 18; @symbol_constdef = [dithering,340,18,27]; @symbol_type<0> = [String,340,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 341; @position = 18; @symbol_constdef = [packingFormat,341,18,31]; @symbol_type<0> = [String,341,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 344; @symbol_moduledef = [system_icon_positive__hint_button_left_top,344,15,57]; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 344; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 345; @position = 18; @symbol_constdef = [filename,345,18,26]; @symbol_type<0> = [String,345,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_positive__hint_button_left_top.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 346; @position = 18; @symbol_constdef = [dithering,346,18,27]; @symbol_type<0> = [String,346,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 347; @position = 18; @symbol_constdef = [packingFormat,347,18,31]; @symbol_type<0> = [String,347,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 350; @symbol_moduledef = [system_loc__hint_button_right_bottom,350,15,51]; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 350; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 351; @position = 18; @symbol_constdef = [x,351,18,19]; @symbol_type<0> = [Number,351,23,29]; ]
+            const x as Number = 369;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 352; @position = 18; @symbol_constdef = [y,352,18,19]; @symbol_type<0> = [Number,352,23,29]; ]
+            const y as Number = 283;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 355; @symbol_moduledef = [confirmation_icon_dark__hint_reject,355,15,50]; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 355; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 356; @position = 18; @symbol_constdef = [filename,356,18,26]; @symbol_type<0> = [String,356,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 357; @position = 18; @symbol_constdef = [dithering,357,18,27]; @symbol_type<0> = [String,357,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 358; @position = 18; @symbol_constdef = [packingFormat,358,18,31]; @symbol_type<0> = [String,358,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 361; @symbol_moduledef = [confirmation_color_dark__body,361,15,44]; ]
+        module confirmation_color_dark__body {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 361; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 363 18 ]
+                symbol [ Graphics %tmp.107 363 31 39 ];
+                %tmp.107 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.108 363 40 57 ];
+                %tmp.108 = getv %tmp.107 :COLOR_TRANSPARENT;
+                putv self :background %tmp.108;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 362; @position = 18; @symbol_constdef = [color,362,18,23]; @symbol_type<0> = [Number,362,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 363; @position = 18; @symbol_constdef = [background,363,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 366; @symbol_moduledef = [confirmation_icon_light__hint_confirm,366,15,52]; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 366; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 367; @position = 18; @symbol_constdef = [filename,367,18,26]; @symbol_type<0> = [String,367,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 368; @position = 18; @symbol_constdef = [dithering,368,18,27]; @symbol_type<0> = [String,368,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 369; @position = 18; @symbol_constdef = [packingFormat,369,18,31]; @symbol_type<0> = [String,369,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 372; @symbol_moduledef = [prompt_color_dark__title,372,15,39]; ]
+        module prompt_color_dark__title {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 372; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 374 18 ]
+                symbol [ Graphics %tmp.109 374 31 39 ];
+                %tmp.109 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.110 374 40 57 ];
+                %tmp.110 = getv %tmp.109 :COLOR_TRANSPARENT;
+                putv self :background %tmp.110;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 373; @position = 18; @symbol_constdef = [color,373,18,23]; @symbol_type<0> = [Number,373,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 374; @position = 18; @symbol_constdef = [background,374,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 377; @symbol_moduledef = [system_icon_destructive__cancel,377,15,46]; ]
+        module system_icon_destructive__cancel {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 377; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 378; @position = 18; @symbol_constdef = [filename,378,18,26]; @symbol_type<0> = [String,378,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_destructive__cancel.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 379; @position = 18; @symbol_constdef = [dithering,379,18,27]; @symbol_type<0> = [String,379,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 380; @position = 18; @symbol_constdef = [packingFormat,380,18,31]; @symbol_type<0> = [String,380,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 383; @symbol_moduledef = [system_icon_light__hint_button_right_bottom,383,15,58]; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 383; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 384; @position = 18; @symbol_constdef = [filename,384,18,26]; @symbol_type<0> = [String,384,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 385; @position = 18; @symbol_constdef = [dithering,385,18,27]; @symbol_type<0> = [String,385,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 386; @position = 18; @symbol_constdef = [packingFormat,386,18,31]; @symbol_type<0> = [String,386,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 389; @symbol_moduledef = [prompt_loc__title,389,15,32]; ]
+        module prompt_loc__title {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 389; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 390; @position = 18; @symbol_constdef = [x,390,18,19]; @symbol_type<0> = [Number,390,23,29]; ]
+            const x as Number = 83;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 391; @position = 18; @symbol_constdef = [y,391,18,19]; @symbol_type<0> = [Number,391,23,29]; ]
+            const y as Number = 34;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 394; @symbol_moduledef = [confirmation_font_enhanced_readability__body,394,15,59]; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 394; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 395 18 ]
+                symbol [ Graphics %tmp.111 395 34 42 ];
+                %tmp.111 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.112 395 43 62 ];
+                %tmp.112 = getv %tmp.111 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.113 395 63 71 ];
+                %tmp.113 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.114 395 72 92 ];
+                %tmp.114 = getv %tmp.113 :TEXT_JUSTIFY_VCENTER;
+                %tmp.115 = bitor %tmp.112 %tmp.114;
+                putv self :justification %tmp.115;
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 396 18 ]
+                symbol [ Graphics %tmp.116 396 25 33 ];
+                %tmp.116 = getm $.Toybox.Graphics;
+                symbol [ FONT_SMALL %tmp.117 396 34 44 ];
+                %tmp.117 = getv %tmp.116 :FONT_SMALL;
+                putv self :font %tmp.117;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 395; @position = 18; @symbol_constdef = [justification,395,18,31]; ]
+            const justification;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 396; @position = 18; @symbol_constdef = [font,396,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 399; @symbol_moduledef = [prompt_color_light__title,399,15,40]; ]
+        module prompt_color_light__title {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 399; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 401 18 ]
+                symbol [ Graphics %tmp.118 401 31 39 ];
+                %tmp.118 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.119 401 40 57 ];
+                %tmp.119 = getv %tmp.118 :COLOR_TRANSPARENT;
+                putv self :background %tmp.119;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 400; @position = 18; @symbol_constdef = [color,400,18,23]; @symbol_type<0> = [Number,400,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 401; @position = 18; @symbol_constdef = [background,401,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 404; @symbol_moduledef = [system_icon_dark__hint_button_right_top,404,15,54]; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 404; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 405; @position = 18; @symbol_constdef = [filename,405,18,26]; @symbol_type<0> = [String,405,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 406; @position = 18; @symbol_constdef = [dithering,406,18,27]; @symbol_type<0> = [String,406,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 407; @position = 18; @symbol_constdef = [packingFormat,407,18,31]; @symbol_type<0> = [String,407,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 410; @symbol_moduledef = [system_icon_dark__hint_button_left_middle,410,15,56]; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 410; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 411; @position = 18; @symbol_constdef = [filename,411,18,26]; @symbol_type<0> = [String,411,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__hint_button_left_middle.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 412; @position = 18; @symbol_constdef = [dithering,412,18,27]; @symbol_type<0> = [String,412,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 413; @position = 18; @symbol_constdef = [packingFormat,413,18,31]; @symbol_type<0> = [String,413,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 416; @symbol_moduledef = [confirmation_icon_dark__hint_keep,416,15,48]; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 416; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 417; @position = 18; @symbol_constdef = [filename,417,18,26]; @symbol_type<0> = [String,417,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 418; @position = 18; @symbol_constdef = [dithering,418,18,27]; @symbol_type<0> = [String,418,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 419; @position = 18; @symbol_constdef = [packingFormat,419,18,31]; @symbol_type<0> = [String,419,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 422; @symbol_moduledef = [system_icon_light__cancel,422,15,40]; ]
+        module system_icon_light__cancel {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 422; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 423; @position = 18; @symbol_constdef = [filename,423,18,26]; @symbol_type<0> = [String,423,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__cancel.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 424; @position = 18; @symbol_constdef = [compress,424,18,26]; @symbol_type<0> = [String,424,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 425; @position = 18; @symbol_constdef = [dithering,425,18,27]; @symbol_type<0> = [String,425,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 426; @position = 18; @symbol_constdef = [automaticPalette,426,18,34]; @symbol_type<0> = [String,426,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 427; @position = 18; @symbol_constdef = [packingFormat,427,18,31]; @symbol_type<0> = [String,427,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 430; @symbol_moduledef = [confirmation_icon_light__hint_reject,430,15,51]; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 430; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 431; @position = 18; @symbol_constdef = [filename,431,18,26]; @symbol_type<0> = [String,431,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 432; @position = 18; @symbol_constdef = [dithering,432,18,27]; @symbol_type<0> = [String,432,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 433; @position = 18; @symbol_constdef = [packingFormat,433,18,31]; @symbol_type<0> = [String,433,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 436; @symbol_moduledef = [system_icon_light__about,436,15,39]; ]
+        module system_icon_light__about {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 436; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 437; @position = 18; @symbol_constdef = [filename,437,18,26]; @symbol_type<0> = [String,437,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__about.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 438; @position = 18; @symbol_constdef = [compress,438,18,26]; @symbol_type<0> = [String,438,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 439; @position = 18; @symbol_constdef = [dithering,439,18,27]; @symbol_type<0> = [String,439,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 440; @position = 18; @symbol_constdef = [automaticPalette,440,18,34]; @symbol_type<0> = [String,440,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 441; @position = 18; @symbol_constdef = [packingFormat,441,18,31]; @symbol_type<0> = [String,441,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 444; @symbol_moduledef = [system_size__toast_icon,444,15,38]; ]
+        module system_size__toast_icon {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 444; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 445; @position = 18; @symbol_constdef = [scaleX,445,18,24]; @symbol_type<0> = [Number,445,28,34]; ]
+            const scaleX as Number = 45;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 446; @position = 18; @symbol_constdef = [scaleY,446,18,24]; @symbol_type<0> = [Number,446,28,34]; ]
+            const scaleY as Number = 45;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 447; @position = 18; @symbol_constdef = [scaleRelativeTo,447,18,33]; @symbol_type<0> = [String,447,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 450; @symbol_moduledef = [system_icon_dark__hint_button_right_middle,450,15,57]; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 450; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 451; @position = 18; @symbol_constdef = [exclude,451,18,25]; @symbol_type<0> = [Boolean,451,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 454; @symbol_moduledef = [confirmation_icon__hint_reject,454,15,45]; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 454; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 455; @position = 18; @symbol_constdef = [filename,455,18,26]; @symbol_type<0> = [String,455,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 456; @position = 18; @symbol_constdef = [dithering,456,18,27]; @symbol_type<0> = [String,456,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 457; @position = 18; @symbol_constdef = [packingFormat,457,18,31]; @symbol_type<0> = [String,457,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 460; @symbol_moduledef = [system_icon_light__hint_action_menu,460,15,50]; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 460; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 461; @position = 18; @symbol_constdef = [filename,461,18,26]; @symbol_type<0> = [String,461,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 462; @position = 18; @symbol_constdef = [dithering,462,18,27]; @symbol_type<0> = [String,462,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 463; @position = 18; @symbol_constdef = [packingFormat,463,18,31]; @symbol_type<0> = [String,463,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 466; @symbol_moduledef = [system_icon_light__hint_button_right_middle,466,15,58]; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 466; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 467; @position = 18; @symbol_constdef = [exclude,467,18,25]; @symbol_type<0> = [Boolean,467,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 470; @symbol_moduledef = [system_icon_destructive__hint_button_right_middle,470,15,64]; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 470; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 471; @position = 18; @symbol_constdef = [exclude,471,18,25]; @symbol_type<0> = [Boolean,471,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 474; @symbol_moduledef = [confirmation_loc__hint_reject,474,15,44]; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 474; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 475; @position = 18; @symbol_constdef = [x,475,18,19]; @symbol_type<0> = [Number,475,23,29]; ]
+            const x as Number = 16;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 476; @position = 18; @symbol_constdef = [y,476,18,19]; @symbol_type<0> = [Number,476,23,29]; ]
+            const y as Number = 284;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 479; @symbol_moduledef = [confirmation_icon_dark__hint_delete,479,15,50]; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 479; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 480; @position = 18; @symbol_constdef = [filename,480,18,26]; @symbol_type<0> = [String,480,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 481; @position = 18; @symbol_constdef = [dithering,481,18,27]; @symbol_type<0> = [String,481,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 482; @position = 18; @symbol_constdef = [packingFormat,482,18,31]; @symbol_type<0> = [String,482,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 485; @symbol_moduledef = [activity_color_dark__background,485,15,46]; ]
+        module activity_color_dark__background {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 485; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 486; @position = 18; @symbol_constdef = [color,486,18,23]; @symbol_type<0> = [Number,486,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 487; @position = 18; @symbol_constdef = [background,487,18,28]; @symbol_type<0> = [Number,487,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 490; @symbol_moduledef = [system_icon_light__hint_button_left_bottom,490,15,57]; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 490; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 491; @position = 18; @symbol_constdef = [filename,491,18,26]; @symbol_type<0> = [String,491,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__hint_button_left_bottom.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 492; @position = 18; @symbol_constdef = [dithering,492,18,27]; @symbol_type<0> = [String,492,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 493; @position = 18; @symbol_constdef = [packingFormat,493,18,31]; @symbol_type<0> = [String,493,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 496; @symbol_moduledef = [system_icon_positive__hint_button_left_middle,496,15,60]; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 496; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 497; @position = 18; @symbol_constdef = [filename,497,18,26]; @symbol_type<0> = [String,497,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_positive__hint_button_left_middle.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 498; @position = 18; @symbol_constdef = [dithering,498,18,27]; @symbol_type<0> = [String,498,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 499; @position = 18; @symbol_constdef = [packingFormat,499,18,31]; @symbol_type<0> = [String,499,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 502; @symbol_moduledef = [system_size__menu_icon,502,15,37]; ]
+        module system_size__menu_icon {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 502; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 503; @position = 18; @symbol_constdef = [scaleX,503,18,24]; @symbol_type<0> = [Number,503,28,34]; ]
+            const scaleX as Number = 55;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 504; @position = 18; @symbol_constdef = [scaleY,504,18,24]; @symbol_type<0> = [Number,504,28,34]; ]
+            const scaleY as Number = 55;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 505; @position = 18; @symbol_constdef = [scaleRelativeTo,505,18,33]; @symbol_type<0> = [String,505,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 508; @symbol_moduledef = [system_icon_destructive__warning,508,15,47]; ]
+        module system_icon_destructive__warning {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 508; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 509; @position = 18; @symbol_constdef = [filename,509,18,26]; @symbol_type<0> = [String,509,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_destructive__warning.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 510; @position = 18; @symbol_constdef = [dithering,510,18,27]; @symbol_type<0> = [String,510,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 511; @position = 18; @symbol_constdef = [packingFormat,511,18,31]; @symbol_type<0> = [String,511,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 514; @symbol_moduledef = [system_loc__hint_button_right_middle,514,15,51]; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 514; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 515; @position = 18; @symbol_constdef = [exclude,515,18,25]; @symbol_type<0> = [Boolean,515,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 518; @symbol_moduledef = [system_icon_dark__cancel,518,15,39]; ]
+        module system_icon_dark__cancel {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 518; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 519; @position = 18; @symbol_constdef = [filename,519,18,26]; @symbol_type<0> = [String,519,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__cancel.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 520; @position = 18; @symbol_constdef = [compress,520,18,26]; @symbol_type<0> = [String,520,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 521; @position = 18; @symbol_constdef = [dithering,521,18,27]; @symbol_type<0> = [String,521,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 522; @position = 18; @symbol_constdef = [automaticPalette,522,18,34]; @symbol_type<0> = [String,522,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 523; @position = 18; @symbol_constdef = [packingFormat,523,18,31]; @symbol_type<0> = [String,523,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 526; @symbol_moduledef = [prompt_size__body_with_title,526,15,43]; ]
+        module prompt_size__body_with_title {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 526; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 527; @position = 18; @symbol_constdef = [width,527,18,23]; @symbol_type<0> = [Number,527,27,33]; ]
+            const width as Number = 302;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 528; @position = 18; @symbol_constdef = [height,528,18,24]; @symbol_type<0> = [Number,528,28,34]; ]
+            const height as Number = 254;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 531; @symbol_moduledef = [system_loc__hint_button_right_top,531,15,48]; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 531; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 532; @position = 18; @symbol_constdef = [x,532,18,19]; @symbol_type<0> = [Number,532,23,29]; ]
+            const x as Number = 379;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 533; @position = 18; @symbol_constdef = [y,533,18,19]; @symbol_type<0> = [Number,533,23,29]; ]
+            const y as Number = 89;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 536; @symbol_moduledef = [system_color_light__text,536,15,39]; ]
+        module system_color_light__text {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 536; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 538 18 ]
+                symbol [ Graphics %tmp.120 538 31 39 ];
+                %tmp.120 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.121 538 40 57 ];
+                %tmp.121 = getv %tmp.120 :COLOR_TRANSPARENT;
+                putv self :background %tmp.121;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 537; @position = 18; @symbol_constdef = [color,537,18,23]; @symbol_type<0> = [Number,537,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 538; @position = 18; @symbol_constdef = [background,538,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 541; @symbol_moduledef = [system_icon_light__check,541,15,39]; ]
+        module system_icon_light__check {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 541; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 542; @position = 18; @symbol_constdef = [filename,542,18,26]; @symbol_type<0> = [String,542,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__check.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 543; @position = 18; @symbol_constdef = [compress,543,18,26]; @symbol_type<0> = [String,543,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 544; @position = 18; @symbol_constdef = [dithering,544,18,27]; @symbol_type<0> = [String,544,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 545; @position = 18; @symbol_constdef = [automaticPalette,545,18,34]; @symbol_type<0> = [String,545,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 546; @position = 18; @symbol_constdef = [packingFormat,546,18,31]; @symbol_type<0> = [String,546,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 549; @symbol_moduledef = [confirmation_input__reject,549,15,41]; ]
+        module confirmation_input__reject {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 549; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 550 18 ]
+                symbol [ WatchUi %tmp.122 550 27 34 ];
+                %tmp.122 = getm $.Toybox.WatchUi;
+                symbol [ KEY_DOWN %tmp.123 550 35 43 ];
+                %tmp.123 = getv %tmp.122 :KEY_DOWN;
+                putv self :button %tmp.123;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 550; @position = 18; @symbol_constdef = [button,550,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 553; @symbol_moduledef = [system_icon_light__revert,553,15,40]; ]
+        module system_icon_light__revert {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 553; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 554; @position = 18; @symbol_constdef = [filename,554,18,26]; @symbol_type<0> = [String,554,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__revert.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 555; @position = 18; @symbol_constdef = [compress,555,18,26]; @symbol_type<0> = [String,555,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 556; @position = 18; @symbol_constdef = [dithering,556,18,27]; @symbol_type<0> = [String,556,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 557; @position = 18; @symbol_constdef = [automaticPalette,557,18,34]; @symbol_type<0> = [String,557,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 558; @position = 18; @symbol_constdef = [packingFormat,558,18,31]; @symbol_type<0> = [String,558,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 561; @symbol_moduledef = [system_size__subwindow,561,15,37]; ]
+        module system_size__subwindow {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 561; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 562; @position = 18; @symbol_constdef = [exclude,562,18,25]; @symbol_type<0> = [Boolean,562,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 565; @symbol_moduledef = [system_icon_positive__hint_button_left_bottom,565,15,60]; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 565; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 566; @position = 18; @symbol_constdef = [filename,566,18,26]; @symbol_type<0> = [String,566,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_positive__hint_button_left_bottom.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 567; @position = 18; @symbol_constdef = [dithering,567,18,27]; @symbol_type<0> = [String,567,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 568; @position = 18; @symbol_constdef = [packingFormat,568,18,31]; @symbol_type<0> = [String,568,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 571; @symbol_moduledef = [system_icon_dark__check,571,15,38]; ]
+        module system_icon_dark__check {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 571; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 572; @position = 18; @symbol_constdef = [filename,572,18,26]; @symbol_type<0> = [String,572,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__check.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 573; @position = 18; @symbol_constdef = [compress,573,18,26]; @symbol_type<0> = [String,573,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 574; @position = 18; @symbol_constdef = [dithering,574,18,27]; @symbol_type<0> = [String,574,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 575; @position = 18; @symbol_constdef = [automaticPalette,575,18,34]; @symbol_type<0> = [String,575,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 576; @position = 18; @symbol_constdef = [packingFormat,576,18,31]; @symbol_type<0> = [String,576,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 579; @symbol_moduledef = [confirmation_loc__hint_keep,579,15,42]; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 579; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 580; @position = 18; @symbol_constdef = [x,580,18,19]; @symbol_type<0> = [Number,580,23,29]; ]
+            const x as Number = 372;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 581; @position = 18; @symbol_constdef = [y,581,18,19]; @symbol_type<0> = [Number,581,23,29]; ]
+            const y as Number = 286;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 584; @symbol_moduledef = [confirmation_loc__hint_delete,584,15,44]; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 584; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 585; @position = 18; @symbol_constdef = [x,585,18,19]; @symbol_type<0> = [Number,585,23,29]; ]
+            const x as Number = 16;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 586; @position = 18; @symbol_constdef = [y,586,18,19]; @symbol_type<0> = [Number,586,23,29]; ]
+            const y as Number = 284;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 589; @symbol_moduledef = [system_icon_positive__hint_action_menu,589,15,53]; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 589; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 590; @position = 18; @symbol_constdef = [filename,590,18,26]; @symbol_type<0> = [String,590,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_positive__hint_button_right_top.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 591; @position = 18; @symbol_constdef = [dithering,591,18,27]; @symbol_type<0> = [String,591,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 592; @position = 18; @symbol_constdef = [packingFormat,592,18,31]; @symbol_type<0> = [String,592,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 595; @symbol_moduledef = [system_icon_positive__hint_button_right_middle,595,15,61]; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 595; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 596; @position = 18; @symbol_constdef = [exclude,596,18,25]; @symbol_type<0> = [Boolean,596,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 599; @symbol_moduledef = [system_icon_light__hint_button_left_middle,599,15,57]; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 599; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 600; @position = 18; @symbol_constdef = [filename,600,18,26]; @symbol_type<0> = [String,600,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__hint_button_left_middle.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 601; @position = 18; @symbol_constdef = [dithering,601,18,27]; @symbol_type<0> = [String,601,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 602; @position = 18; @symbol_constdef = [packingFormat,602,18,31]; @symbol_type<0> = [String,602,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 605; @symbol_moduledef = [system_icon_dark__hint_button_right_bottom,605,15,57]; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 605; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 606; @position = 18; @symbol_constdef = [filename,606,18,26]; @symbol_type<0> = [String,606,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 607; @position = 18; @symbol_constdef = [dithering,607,18,27]; @symbol_type<0> = [String,607,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 608; @position = 18; @symbol_constdef = [packingFormat,608,18,31]; @symbol_type<0> = [String,608,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 611; @symbol_moduledef = [system_icon_positive__hint_button_right_bottom,611,15,61]; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 611; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 612; @position = 18; @symbol_constdef = [filename,612,18,26]; @symbol_type<0> = [String,612,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_positive__hint_button_right_bottom.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 613; @position = 18; @symbol_constdef = [dithering,613,18,27]; @symbol_type<0> = [String,613,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 614; @position = 18; @symbol_constdef = [packingFormat,614,18,31]; @symbol_type<0> = [String,614,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 617; @symbol_moduledef = [system_icon_dark__revert,617,15,39]; ]
+        module system_icon_dark__revert {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 617; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 618; @position = 18; @symbol_constdef = [filename,618,18,26]; @symbol_type<0> = [String,618,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__revert.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 619; @position = 18; @symbol_constdef = [compress,619,18,26]; @symbol_type<0> = [String,619,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 620; @position = 18; @symbol_constdef = [dithering,620,18,27]; @symbol_type<0> = [String,620,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 621; @position = 18; @symbol_constdef = [automaticPalette,621,18,34]; @symbol_type<0> = [String,621,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 622; @position = 18; @symbol_constdef = [packingFormat,622,18,31]; @symbol_type<0> = [String,622,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 625; @symbol_moduledef = [confirmation_icon_light__hint_delete,625,15,51]; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 625; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 626; @position = 18; @symbol_constdef = [filename,626,18,26]; @symbol_type<0> = [String,626,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 627; @position = 18; @symbol_constdef = [dithering,627,18,27]; @symbol_type<0> = [String,627,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 628; @position = 18; @symbol_constdef = [packingFormat,628,18,31]; @symbol_type<0> = [String,628,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 631; @symbol_moduledef = [system_icon_dark__question,631,15,41]; ]
+        module system_icon_dark__question {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 631; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 632; @position = 18; @symbol_constdef = [filename,632,18,26]; @symbol_type<0> = [String,632,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__question.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 633; @position = 18; @symbol_constdef = [compress,633,18,26]; @symbol_type<0> = [String,633,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 634; @position = 18; @symbol_constdef = [dithering,634,18,27]; @symbol_type<0> = [String,634,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 635; @position = 18; @symbol_constdef = [automaticPalette,635,18,34]; @symbol_type<0> = [String,635,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 636; @position = 18; @symbol_constdef = [packingFormat,636,18,31]; @symbol_type<0> = [String,636,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 639; @symbol_moduledef = [system_icon_light__discard,639,15,41]; ]
+        module system_icon_light__discard {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 639; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 640; @position = 18; @symbol_constdef = [filename,640,18,26]; @symbol_type<0> = [String,640,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__discard.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 641; @position = 18; @symbol_constdef = [compress,641,18,26]; @symbol_type<0> = [String,641,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 642; @position = 18; @symbol_constdef = [dithering,642,18,27]; @symbol_type<0> = [String,642,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 643; @position = 18; @symbol_constdef = [automaticPalette,643,18,34]; @symbol_type<0> = [String,643,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 644; @position = 18; @symbol_constdef = [packingFormat,644,18,31]; @symbol_type<0> = [String,644,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 647; @symbol_moduledef = [device_info,647,15,26]; ]
+        module device_info {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 647; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 649 18 ]
+                symbol [ Toybox %tmp.125 649 32 38 ];
+                %tmp.125 = getv ? :Toybox;
+                symbol [ System %tmp.126 649 39 45 ];
+                %tmp.126 = getv %tmp.125 :System;
+                symbol [ SCREEN_SHAPE_ROUND %tmp.127 649 46 64 ];
+                %tmp.127 = getv %tmp.126 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.127;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 648; @position = 18; @symbol_constdef = [screenWidth,648,18,29]; @symbol_type<0> = [Number,648,33,39]; ]
+            const screenWidth as Number = 454;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 649; @position = 18; @symbol_constdef = [screenShape,649,18,29]; ]
+            const screenShape;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 650; @position = 18; @symbol_constdef = [hasNightMode,650,18,30]; @symbol_type<0> = [Boolean,650,34,41]; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 651; @position = 18; @symbol_constdef = [hasGpu,651,18,24]; @symbol_type<0> = [Boolean,651,28,35]; ]
+            const hasGpu as Boolean = true;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 652; @position = 18; @symbol_constdef = [screenHeight,652,18,30]; @symbol_type<0> = [Number,652,34,40]; ]
+            const screenHeight as Number = 454;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 653; @position = 18; @symbol_constdef = [hasTouchScreen,653,18,32]; @symbol_type<0> = [Boolean,653,36,43]; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 654; @position = 18; @symbol_constdef = [hasEnhancedReadabilityMode,654,18,44]; @symbol_type<0> = [Boolean,654,48,55]; ]
+            const hasEnhancedReadabilityMode as Boolean = true;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 657; @symbol_moduledef = [confirmation_icon_dark__hint_confirm,657,15,51]; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 657; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 658; @position = 18; @symbol_constdef = [filename,658,18,26]; @symbol_type<0> = [String,658,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 659; @position = 18; @symbol_constdef = [dithering,659,18,27]; @symbol_type<0> = [String,659,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 660; @position = 18; @symbol_constdef = [packingFormat,660,18,31]; @symbol_type<0> = [String,660,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 663; @symbol_moduledef = [prompt_font__body_no_title,663,15,41]; ]
+        module prompt_font__body_no_title {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 663; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 664 18 ]
+                symbol [ Graphics %tmp.128 664 34 42 ];
+                %tmp.128 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.129 664 43 62 ];
+                %tmp.129 = getv %tmp.128 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.130 664 63 71 ];
+                %tmp.130 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.131 664 72 92 ];
+                %tmp.131 = getv %tmp.130 :TEXT_JUSTIFY_VCENTER;
+                %tmp.132 = bitor %tmp.129 %tmp.131;
+                putv self :justification %tmp.132;
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 665 18 ]
+                symbol [ Graphics %tmp.133 665 25 33 ];
+                %tmp.133 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.134 665 34 44 ];
+                %tmp.134 = getv %tmp.133 :FONT_XTINY;
+                putv self :font %tmp.134;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 664; @position = 18; @symbol_constdef = [justification,664,18,31]; ]
+            const justification;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 665; @position = 18; @symbol_constdef = [font,665,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 668; @symbol_moduledef = [prompt_size__title_icon,668,15,38]; ]
+        module prompt_size__title_icon {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 668; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 669; @position = 18; @symbol_constdef = [scaleX,669,18,24]; @symbol_type<0> = [Float,669,28,33]; ]
+            const scaleX as Float = 0.13;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 670; @position = 18; @symbol_constdef = [scaleRelativeTo,670,18,33]; @symbol_type<0> = [String,670,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 673; @symbol_moduledef = [system_icon_dark__warning,673,15,40]; ]
+        module system_icon_dark__warning {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 673; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 674; @position = 18; @symbol_constdef = [filename,674,18,26]; @symbol_type<0> = [String,674,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__warning.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 675; @position = 18; @symbol_constdef = [compress,675,18,26]; @symbol_type<0> = [String,675,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 676; @position = 18; @symbol_constdef = [dithering,676,18,27]; @symbol_type<0> = [String,676,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 677; @position = 18; @symbol_constdef = [automaticPalette,677,18,34]; @symbol_type<0> = [String,677,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 678; @position = 18; @symbol_constdef = [packingFormat,678,18,31]; @symbol_type<0> = [String,678,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 681; @symbol_moduledef = [prompt_loc__title_icon,681,15,37]; ]
+        module prompt_loc__title_icon {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 681; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 682; @position = 18; @symbol_constdef = [x,682,18,19]; @symbol_type<0> = [Number,682,23,29]; ]
+            const x as Number = 227;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 683; @position = 18; @symbol_constdef = [y,683,18,19]; @symbol_type<0> = [Number,683,23,29]; ]
+            const y as Number = 46;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 684; @position = 18; @symbol_constdef = [horizontalJustification,684,18,41]; @symbol_type<0> = [String,684,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 685; @position = 18; @symbol_constdef = [verticalJustification,685,18,39]; @symbol_type<0> = [String,685,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 688; @symbol_moduledef = [prompt_font_enhanced_readability__title,688,15,54]; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 688; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 689 18 ]
+                symbol [ Graphics %tmp.135 689 34 42 ];
+                %tmp.135 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.136 689 43 62 ];
+                %tmp.136 = getv %tmp.135 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.137 689 63 71 ];
+                %tmp.137 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.138 689 72 92 ];
+                %tmp.138 = getv %tmp.137 :TEXT_JUSTIFY_VCENTER;
+                %tmp.139 = bitor %tmp.136 %tmp.138;
+                putv self :justification %tmp.139;
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 690 18 ]
+                symbol [ Graphics %tmp.140 690 25 33 ];
+                %tmp.140 = getm $.Toybox.Graphics;
+                symbol [ FONT_MEDIUM %tmp.141 690 34 45 ];
+                %tmp.141 = getv %tmp.140 :FONT_MEDIUM;
+                putv self :font %tmp.141;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 689; @position = 18; @symbol_constdef = [justification,689,18,31]; ]
+            const justification;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 690; @position = 18; @symbol_constdef = [font,690,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 693; @symbol_moduledef = [prompt_color_dark__body,693,15,38]; ]
+        module prompt_color_dark__body {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 693; ]
+            <init> {
+[ "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen" 695 18 ]
+                symbol [ Graphics %tmp.142 695 31 39 ];
+                %tmp.142 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.143 695 40 57 ];
+                %tmp.143 = getv %tmp.142 :COLOR_TRANSPARENT;
+                putv self :background %tmp.143;
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 694; @position = 18; @symbol_constdef = [color,694,18,23]; @symbol_type<0> = [Number,694,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 695; @position = 18; @symbol_constdef = [background,695,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 698; @symbol_moduledef = [confirmation_icon__hint_delete,698,15,45]; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 698; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 699; @position = 18; @symbol_constdef = [filename,699,18,26]; @symbol_type<0> = [String,699,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 700; @position = 18; @symbol_constdef = [dithering,700,18,27]; @symbol_type<0> = [String,700,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 701; @position = 18; @symbol_constdef = [packingFormat,701,18,31]; @symbol_type<0> = [String,701,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 704; @symbol_moduledef = [system_icon_light__hint_button_right_top,704,15,55]; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 704; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 705; @position = 18; @symbol_constdef = [filename,705,18,26]; @symbol_type<0> = [String,705,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 706; @position = 18; @symbol_constdef = [dithering,706,18,27]; @symbol_type<0> = [String,706,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 707; @position = 18; @symbol_constdef = [packingFormat,707,18,31]; @symbol_type<0> = [String,707,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 710; @symbol_moduledef = [confirmation_size__body,710,15,38]; ]
+        module confirmation_size__body {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 710; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 711; @position = 18; @symbol_constdef = [width,711,18,23]; @symbol_type<0> = [Number,711,27,33]; ]
+            const width as Number = 316;
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 712; @position = 18; @symbol_constdef = [height,712,18,24]; @symbol_type<0> = [Number,712,28,34]; ]
+            const height as Number = 246;
+        }
+        [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 715; @symbol_moduledef = [system_icon_positive__check,715,15,42]; ]
+        module system_icon_positive__check {
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 715; ]
+            <init> {
+            }
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 716; @position = 18; @symbol_constdef = [filename,716,18,26]; @symbol_type<0> = [String,716,30,36]; ]
+            const filename as String = "C:\\Users\\aderd\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr970\\system_icon_positive__check.svg";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 717; @position = 18; @symbol_constdef = [dithering,717,18,27]; @symbol_type<0> = [String,717,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 718; @position = 18; @symbol_constdef = [packingFormat,718,18,31]; @symbol_type<0> = [String,718,35,41]; ]
+            const packingFormat as String = "png";
+        }
+    }
+}
+[ @file = "c:\Lange970\Lange970\bin\gen\006-B4565-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}
