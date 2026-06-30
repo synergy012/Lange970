@@ -1,0 +1,16 @@
+# Garmin build output
+bin/
+gen/
+mir/
+internal-mir/
+
+# Build artifacts
+*.prg
+*.debug.xml
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
