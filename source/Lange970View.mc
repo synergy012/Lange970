@@ -124,7 +124,7 @@ class Lange970View extends WatchUi.WatchFace {
 
     function drawDateWindow(dc, cx, cy) {
         var info = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        var dayText = now.day.format("%02d");
+        var dayText = info.day.format("%02d");
         var x = cx - 108;
         var y = cy - 88;
         var ww = 74;
