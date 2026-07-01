@@ -43,10 +43,11 @@ module Geometry {
 
     // Battery arc
     const BATTERY_ARC_RADIUS = 204;
-    const BATTERY_ARC_THICKNESS = 10;
+    const BATTERY_ARC_THICKNESS = 5;
     const BATTERY_START_ANGLE = 198;
-    const BATTERY_END_ANGLE = 318;
-    const BATTERY_FILL_THICKNESS = 6;
+    const BATTERY_END_ANGLE = 18;
+    const BATTERY_FILL_THICKNESS = 3;
+    const BATTERY_CAP_RADIUS = 3;
     const FULL_CIRCLE_DEGREES = 360;
 
     // Time subdial

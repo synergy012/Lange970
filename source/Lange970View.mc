@@ -93,28 +93,44 @@ class Lange970View extends WatchUi.WatchFace {
     function drawBatteryArc(dc) {
         var stats = System.getSystemStats();
         var battery = stats.battery;
-        var span = Geometry.BATTERY_END_ANGLE - Geometry.BATTERY_START_ANGLE;
+        var span = Geometry.BATTERY_START_ANGLE - Geometry.BATTERY_END_ANGLE;
         if (span < 0) {
             span += Geometry.FULL_CIRCLE_DEGREES;
         }
 
-        var fillEnd = Geometry.BATTERY_START_ANGLE + (span * battery / Geometry.FULL_BATTERY_PERCENT);
-        if (fillEnd > Geometry.FULL_CIRCLE_DEGREES) {
-            fillEnd -= Geometry.FULL_CIRCLE_DEGREES;
+        var fillEnd = Geometry.BATTERY_START_ANGLE - (span * battery / Geometry.FULL_BATTERY_PERCENT);
+        if (fillEnd < 0) {
+            fillEnd += Geometry.FULL_CIRCLE_DEGREES;
         }
-
-        dc.setPenWidth(Geometry.BATTERY_ARC_THICKNESS);
-        dc.setColor(Colors.BATTERY_TRACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawArc(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.BATTERY_ARC_RADIUS, Graphics.ARC_CLOCKWISE, Geometry.BATTERY_START_ANGLE, Geometry.BATTERY_END_ANGLE);
 
         dc.setPenWidth(Geometry.MONTH_RING_THICKNESS);
         dc.setColor(Colors.ROSE_GOLD_DIM, Graphics.COLOR_TRANSPARENT);
         dc.drawArc(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.BATTERY_ARC_RADIUS - Geometry.BATTERY_ARC_THICKNESS, Graphics.ARC_CLOCKWISE, Geometry.BATTERY_START_ANGLE, Geometry.BATTERY_END_ANGLE);
         dc.drawArc(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.BATTERY_ARC_RADIUS + Geometry.BATTERY_ARC_THICKNESS, Graphics.ARC_CLOCKWISE, Geometry.BATTERY_START_ANGLE, Geometry.BATTERY_END_ANGLE);
 
+        dc.setPenWidth(Geometry.BATTERY_ARC_THICKNESS);
+        dc.setColor(Colors.BATTERY_TRACK, Graphics.COLOR_TRANSPARENT);
+        dc.drawArc(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.BATTERY_ARC_RADIUS, Graphics.ARC_CLOCKWISE, Geometry.BATTERY_START_ANGLE, Geometry.BATTERY_END_ANGLE);
+
         dc.setPenWidth(Geometry.BATTERY_FILL_THICKNESS);
         dc.setColor(Colors.BATTERY_FILL, Graphics.COLOR_TRANSPARENT);
         dc.drawArc(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.BATTERY_ARC_RADIUS, Graphics.ARC_CLOCKWISE, Geometry.BATTERY_START_ANGLE, fillEnd);
+
+        var startRadians = degreesToRadians(Geometry.BATTERY_START_ANGLE);
+        var endRadians = degreesToRadians(Geometry.BATTERY_END_ANGLE);
+        var fillRadians = degreesToRadians(fillEnd);
+        var startX = Geometry.WATCH_CENTER_X + Math.cos(startRadians) * Geometry.BATTERY_ARC_RADIUS;
+        var startY = Geometry.WATCH_CENTER_Y - Math.sin(startRadians) * Geometry.BATTERY_ARC_RADIUS;
+        var endX = Geometry.WATCH_CENTER_X + Math.cos(endRadians) * Geometry.BATTERY_ARC_RADIUS;
+        var endY = Geometry.WATCH_CENTER_Y - Math.sin(endRadians) * Geometry.BATTERY_ARC_RADIUS;
+        var fillX = Geometry.WATCH_CENTER_X + Math.cos(fillRadians) * Geometry.BATTERY_ARC_RADIUS;
+        var fillY = Geometry.WATCH_CENTER_Y - Math.sin(fillRadians) * Geometry.BATTERY_ARC_RADIUS;
+
+        dc.setColor(Colors.ROSE_GOLD_DIM, Colors.ROSE_GOLD_DIM);
+        dc.fillCircle(startX, startY, Geometry.BATTERY_CAP_RADIUS);
+        dc.fillCircle(endX, endY, Geometry.BATTERY_CAP_RADIUS);
+        dc.setColor(Colors.BATTERY_FILL, Colors.BATTERY_FILL);
+        dc.fillCircle(fillX, fillY, Geometry.BATTERY_CAP_RADIUS);
     }
 
     function drawMonthRing(dc) {
