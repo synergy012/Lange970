@@ -39,9 +39,19 @@ class Lange970View extends WatchUi.WatchFace {
         dc.setColor(Colors.DIAL_DARK, Colors.DIAL_DARK);
         dc.fillCircle(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.WATCH_RADIUS);
 
-        dc.setPenWidth(Geometry.MONTH_RING_THICKNESS);
+        dc.setPenWidth(Geometry.CHAPTER_RING_THICKNESS);
         dc.setColor(Colors.ROSE_GOLD_DIM, Graphics.COLOR_TRANSPARENT);
-        dc.drawCircle(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.MONTH_RING_RADIUS);
+        dc.drawCircle(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.BEZEL_HIGHLIGHT_RADIUS);
+
+        dc.setPenWidth(Geometry.MONTH_RING_THICKNESS);
+        dc.setColor(Colors.DIAL_GRAIN, Graphics.COLOR_TRANSPARENT);
+        for (var i = 0; i < Geometry.DIAL_TEXTURE_COUNT; i += 1) {
+            dc.drawCircle(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.DIAL_TEXTURE_START_RADIUS + (i * Geometry.DIAL_TEXTURE_STEP));
+        }
+
+        dc.setPenWidth(Geometry.MONTH_RING_THICKNESS);
+        dc.setColor(Colors.SHADOW, Graphics.COLOR_TRANSPARENT);
+        dc.drawCircle(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.BEZEL_SHADOW_RADIUS);
     }
 
     function drawChapterRing(dc) {
@@ -52,6 +62,10 @@ class Lange970View extends WatchUi.WatchFace {
         dc.setPenWidth(Geometry.MONTH_RING_THICKNESS);
         dc.setColor(Colors.ROSE_GOLD_LIGHT, Graphics.COLOR_TRANSPARENT);
         dc.drawCircle(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.CHAPTER_RING_INNER_RADIUS);
+
+        dc.setPenWidth(Geometry.MONTH_RING_THICKNESS);
+        dc.setColor(Colors.ROSE_GOLD_DIM, Graphics.COLOR_TRANSPARENT);
+        dc.drawCircle(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.MONTH_RING_RADIUS);
 
         dc.setPenWidth(Geometry.DATE_BORDER_THICKNESS);
         dc.setColor(Colors.DIAL_DEPTH, Graphics.COLOR_TRANSPARENT);
@@ -93,6 +107,11 @@ class Lange970View extends WatchUi.WatchFace {
         dc.setColor(Colors.BATTERY_TRACK, Graphics.COLOR_TRANSPARENT);
         dc.drawArc(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.BATTERY_ARC_RADIUS, Graphics.ARC_CLOCKWISE, Geometry.BATTERY_START_ANGLE, Geometry.BATTERY_END_ANGLE);
 
+        dc.setPenWidth(Geometry.MONTH_RING_THICKNESS);
+        dc.setColor(Colors.ROSE_GOLD_DIM, Graphics.COLOR_TRANSPARENT);
+        dc.drawArc(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.BATTERY_ARC_RADIUS - Geometry.BATTERY_ARC_THICKNESS, Graphics.ARC_CLOCKWISE, Geometry.BATTERY_START_ANGLE, Geometry.BATTERY_END_ANGLE);
+        dc.drawArc(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.BATTERY_ARC_RADIUS + Geometry.BATTERY_ARC_THICKNESS, Graphics.ARC_CLOCKWISE, Geometry.BATTERY_START_ANGLE, Geometry.BATTERY_END_ANGLE);
+
         dc.setPenWidth(Geometry.BATTERY_FILL_THICKNESS);
         dc.setColor(Colors.BATTERY_FILL, Graphics.COLOR_TRANSPARENT);
         dc.drawArc(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.BATTERY_ARC_RADIUS, Graphics.ARC_CLOCKWISE, Geometry.BATTERY_START_ANGLE, fillEnd);
@@ -119,19 +138,26 @@ class Lange970View extends WatchUi.WatchFace {
 
     function drawDateWindow(dc) {
         var info = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        var dayText = info.day.format("%02d");
+        var leftDigit = (info.day / 10).format("%d");
+        var rightDigit = (info.day % 10).format("%d");
 
         dc.setColor(Colors.SHADOW, Colors.SHADOW);
+        dc.fillRoundedRectangle(Geometry.DATE_X - Geometry.DATE_BORDER_THICKNESS, Geometry.DATE_Y - Geometry.DATE_BORDER_THICKNESS, Geometry.DATE_WIDTH + (Geometry.DATE_BORDER_THICKNESS * Geometry.HALF_DIVISOR), Geometry.DATE_HEIGHT + (Geometry.DATE_BORDER_THICKNESS * Geometry.HALF_DIVISOR), Geometry.DATE_CORNER_RADIUS);
+        dc.setColor(Colors.APERTURE_FILL, Colors.APERTURE_FILL);
         dc.fillRoundedRectangle(Geometry.DATE_X, Geometry.DATE_Y, Geometry.DATE_WIDTH, Geometry.DATE_HEIGHT, Geometry.DATE_CORNER_RADIUS);
         dc.setPenWidth(Geometry.DATE_BORDER_THICKNESS);
         dc.setColor(Colors.ROSE_GOLD, Graphics.COLOR_TRANSPARENT);
         dc.drawRoundedRectangle(Geometry.DATE_X, Geometry.DATE_Y, Geometry.DATE_WIDTH, Geometry.DATE_HEIGHT, Geometry.DATE_CORNER_RADIUS);
-        dc.setColor(Colors.TEXT_WARM, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(Geometry.DATE_X + Geometry.DATE_WIDTH / Geometry.HALF_DIVISOR, Geometry.DATE_Y + Geometry.DATE_HEIGHT / Geometry.HALF_DIVISOR, Typography.DATE_FONT_SIZE, dayText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawLine(Geometry.DATE_DIVIDER_X, Geometry.DATE_Y, Geometry.DATE_DIVIDER_X, Geometry.DATE_Y + Geometry.DATE_HEIGHT);
+        dc.setColor(Colors.SHADOW, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(Geometry.DATE_LEFT_CENTER_X, Geometry.DATE_Y + Geometry.DATE_HEIGHT / Geometry.HALF_DIVISOR, Typography.DATE_FONT_SIZE, leftDigit, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(Geometry.DATE_RIGHT_CENTER_X, Geometry.DATE_Y + Geometry.DATE_HEIGHT / Geometry.HALF_DIVISOR, Typography.DATE_FONT_SIZE, rightDigit, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     function drawTimeDial(dc) {
         dc.setColor(Colors.SHADOW, Colors.SHADOW);
+        dc.fillCircle(Geometry.SUBDIAL_X, Geometry.SUBDIAL_Y, Geometry.SUBDIAL_SHADOW_RADIUS);
+        dc.setColor(Colors.DIAL_DEPTH, Colors.DIAL_DEPTH);
         dc.fillCircle(Geometry.SUBDIAL_X, Geometry.SUBDIAL_Y, Geometry.SUBDIAL_RADIUS);
         dc.setPenWidth(Geometry.SUBDIAL_RING_THICKNESS);
         dc.setColor(Colors.ROSE_GOLD, Graphics.COLOR_TRANSPARENT);
@@ -139,6 +165,8 @@ class Lange970View extends WatchUi.WatchFace {
         dc.setPenWidth(Geometry.MONTH_RING_THICKNESS);
         dc.setColor(Colors.ROSE_GOLD_DIM, Graphics.COLOR_TRANSPARENT);
         dc.drawCircle(Geometry.SUBDIAL_X, Geometry.SUBDIAL_Y, Geometry.SUBDIAL_INNER_RADIUS);
+        dc.setColor(Colors.DIAL_GRAIN, Graphics.COLOR_TRANSPARENT);
+        dc.drawCircle(Geometry.SUBDIAL_X, Geometry.SUBDIAL_Y, Geometry.SUBDIAL_HIGHLIGHT_RADIUS);
 
         for (var i = 0; i < Geometry.SUBDIAL_MARKER_COUNT; i += 1) {
             var angle = degreesToRadians((i * Geometry.SUBDIAL_MARKER_STEP) + Geometry.MARKER_START_ANGLE);
@@ -151,7 +179,16 @@ class Lange970View extends WatchUi.WatchFace {
             dc.drawLine(x1, y1, x2, y2);
         }
 
+        drawSubdialNumerals(dc);
         drawHands(dc);
+    }
+
+    function drawSubdialNumerals(dc) {
+        dc.setColor(Colors.TEXT_WARM, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(Geometry.SUBDIAL_X, Geometry.SUBDIAL_Y - Geometry.SUBDIAL_NUMERAL_RADIUS, Typography.SUBDIAL_FONT_SIZE, "XII", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(Geometry.SUBDIAL_X + Geometry.SUBDIAL_NUMERAL_RADIUS, Geometry.SUBDIAL_Y, Typography.SUBDIAL_FONT_SIZE, "III", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(Geometry.SUBDIAL_X, Geometry.SUBDIAL_Y + Geometry.SUBDIAL_NUMERAL_RADIUS, Typography.SUBDIAL_FONT_SIZE, "VI", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(Geometry.SUBDIAL_X - Geometry.SUBDIAL_NUMERAL_RADIUS, Geometry.SUBDIAL_Y, Typography.SUBDIAL_FONT_SIZE, "IX", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     function drawHands(dc) {
@@ -173,6 +210,14 @@ class Lange970View extends WatchUi.WatchFace {
 
     function drawComplicationPlaceholders(dc) {
         dc.setPenWidth(Geometry.MONTH_RING_THICKNESS);
+        dc.setColor(Colors.SHADOW, Colors.SHADOW);
+        dc.fillCircle(Geometry.COMPLICATION_LEFT_X, Geometry.COMPLICATION_LEFT_Y, Geometry.COMPLICATION_LEFT_RADIUS);
+        dc.fillCircle(Geometry.COMPLICATION_RIGHT_X, Geometry.COMPLICATION_RIGHT_Y, Geometry.COMPLICATION_RIGHT_RADIUS);
+        dc.fillCircle(Geometry.MOON_X, Geometry.MOON_Y, Geometry.MOON_RADIUS);
+        dc.setColor(Colors.DIAL_DEPTH, Colors.DIAL_DEPTH);
+        dc.fillCircle(Geometry.COMPLICATION_LEFT_X, Geometry.COMPLICATION_LEFT_Y, Geometry.COMPLICATION_LEFT_RADIUS - Geometry.DATE_BORDER_THICKNESS);
+        dc.fillCircle(Geometry.COMPLICATION_RIGHT_X, Geometry.COMPLICATION_RIGHT_Y, Geometry.COMPLICATION_RIGHT_RADIUS - Geometry.DATE_BORDER_THICKNESS);
+        dc.fillCircle(Geometry.MOON_X, Geometry.MOON_Y, Geometry.MOON_RADIUS - Geometry.DATE_BORDER_THICKNESS);
         dc.setColor(Colors.ROSE_GOLD_DIM, Graphics.COLOR_TRANSPARENT);
         dc.drawCircle(Geometry.COMPLICATION_LEFT_X, Geometry.COMPLICATION_LEFT_Y, Geometry.COMPLICATION_LEFT_RADIUS);
         dc.drawCircle(Geometry.COMPLICATION_RIGHT_X, Geometry.COMPLICATION_RIGHT_Y, Geometry.COMPLICATION_RIGHT_RADIUS);
@@ -183,6 +228,7 @@ class Lange970View extends WatchUi.WatchFace {
         dc.setColor(Colors.ROSE_GOLD_DIM, Graphics.COLOR_TRANSPARENT);
         dc.drawText(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y + Geometry.MOON_RADIUS, Typography.SIGNATURE_FONT_SIZE, "LANGE 970 // V0.1", Graphics.TEXT_JUSTIFY_CENTER);
     }
+
 
     function drawHand(dc, deg, len, width, color) {
         var angle = degreesToRadians(deg);
