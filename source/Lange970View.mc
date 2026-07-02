@@ -116,15 +116,15 @@ class Lange970View extends WatchUi.WatchFace {
         dc.setColor(Colors.BATTERY_FILL, Graphics.COLOR_TRANSPARENT);
         dc.drawArc(Geometry.WATCH_CENTER_X, Geometry.WATCH_CENTER_Y, Geometry.BATTERY_ARC_RADIUS, Graphics.ARC_CLOCKWISE, Geometry.BATTERY_START_ANGLE, fillEnd);
 
-        var startRadians = degreesToRadians(Geometry.BATTERY_START_ANGLE);
-        var endRadians = degreesToRadians(Geometry.BATTERY_END_ANGLE);
-        var fillRadians = degreesToRadians(fillEnd);
+        var startRadians = degreesToRadians(0 - Geometry.BATTERY_START_ANGLE);
+        var endRadians = degreesToRadians(0 - Geometry.BATTERY_END_ANGLE);
+        var fillRadians = degreesToRadians(0 - fillEnd);
         var startX = Geometry.WATCH_CENTER_X + Math.cos(startRadians) * Geometry.BATTERY_ARC_RADIUS;
-        var startY = Geometry.WATCH_CENTER_Y - Math.sin(startRadians) * Geometry.BATTERY_ARC_RADIUS;
+        var startY = Geometry.WATCH_CENTER_Y + Math.sin(startRadians) * Geometry.BATTERY_ARC_RADIUS;
         var endX = Geometry.WATCH_CENTER_X + Math.cos(endRadians) * Geometry.BATTERY_ARC_RADIUS;
-        var endY = Geometry.WATCH_CENTER_Y - Math.sin(endRadians) * Geometry.BATTERY_ARC_RADIUS;
+        var endY = Geometry.WATCH_CENTER_Y + Math.sin(endRadians) * Geometry.BATTERY_ARC_RADIUS;
         var fillX = Geometry.WATCH_CENTER_X + Math.cos(fillRadians) * Geometry.BATTERY_ARC_RADIUS;
-        var fillY = Geometry.WATCH_CENTER_Y - Math.sin(fillRadians) * Geometry.BATTERY_ARC_RADIUS;
+        var fillY = Geometry.WATCH_CENTER_Y + Math.sin(fillRadians) * Geometry.BATTERY_ARC_RADIUS;
 
         dc.setColor(Colors.ROSE_GOLD_DIM, Colors.ROSE_GOLD_DIM);
         dc.fillCircle(startX, startY, Geometry.BATTERY_CAP_RADIUS);
@@ -145,11 +145,15 @@ class Lange970View extends WatchUi.WatchFace {
             dc.drawText(x, y, Typography.MONTH_FONT_SIZE, months[i], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         }
 
+        var pointerHalfWidth = Geometry.MONTH_POINTER_SIZE / Geometry.HALF_DIVISOR;
+        var pointerTipY = Geometry.MONTH_POINTER_Y + Geometry.MONTH_POINTER_SIZE;
+        var pointerBaseY = Geometry.MONTH_POINTER_Y - pointerHalfWidth;
+
         dc.setPenWidth(Geometry.DATE_BORDER_THICKNESS);
         dc.setColor(Colors.ROSE_GOLD_LIGHT, Graphics.COLOR_TRANSPARENT);
-        dc.drawLine(Geometry.MONTH_POINTER_X, Geometry.MONTH_POINTER_Y + Geometry.MONTH_POINTER_SIZE, Geometry.MONTH_POINTER_X, Geometry.MONTH_POINTER_Y - Geometry.MONTH_POINTER_SIZE);
-        dc.drawLine(Geometry.MONTH_POINTER_X - Geometry.MONTH_POINTER_SIZE, Geometry.MONTH_POINTER_Y, Geometry.MONTH_POINTER_X, Geometry.MONTH_POINTER_Y + Geometry.MONTH_POINTER_SIZE);
-        dc.drawLine(Geometry.MONTH_POINTER_X + Geometry.MONTH_POINTER_SIZE, Geometry.MONTH_POINTER_Y, Geometry.MONTH_POINTER_X, Geometry.MONTH_POINTER_Y + Geometry.MONTH_POINTER_SIZE);
+        dc.drawLine(Geometry.MONTH_POINTER_X, pointerTipY, Geometry.MONTH_POINTER_X - pointerHalfWidth, pointerBaseY);
+        dc.drawLine(Geometry.MONTH_POINTER_X - pointerHalfWidth, pointerBaseY, Geometry.MONTH_POINTER_X + pointerHalfWidth, pointerBaseY);
+        dc.drawLine(Geometry.MONTH_POINTER_X + pointerHalfWidth, pointerBaseY, Geometry.MONTH_POINTER_X, pointerTipY);
     }
 
     function drawDateWindow(dc) {
